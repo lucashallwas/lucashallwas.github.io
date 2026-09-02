@@ -12,46 +12,11 @@ const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
-
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
-  });
-
-}
-
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+sidebarBtn.addEventListener("click", function () {
+  elementToggleFunc(sidebar);
+  this.querySelector("span").textContent =
+    sidebar.classList.contains("active") ? "Hide Contacts" : "Show Contacts";
+});
 
 
 
@@ -156,4 +121,77 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
   });
+}
+
+
+
+// github card expand/collapse toggle for mobile
+const githubToggle = document.querySelector("[data-github-btn]");
+const githubCard = document.querySelector(".github-card");
+
+if (githubToggle && githubCard) {
+  githubToggle.addEventListener("click", function () {
+    githubCard.classList.toggle("collapsed");
+    this.querySelector("span").textContent =
+      githubCard.classList.contains("collapsed") ? "Expand" : "Collapse";
+  });
+}
+
+
+
+// github contribution graph
+const githubGraph = document.querySelector(".github-graph");
+
+if (githubGraph) {
+
+  const user = githubGraph.dataset.githubUser;
+  const startDate = new Date(githubGraph.dataset.githubStart + "T00:00:00");
+  const today = new Date();
+
+  // github contribution colors (dark theme)
+  const levelColors = ["var(--jet)", "#0e4429", "#006d32", "#26a641", "#39d353"];
+
+  // fetch every year from the start year to the current year
+  const years = [];
+  for (let y = startDate.getFullYear(); y <= today.getFullYear(); y++) years.push(y);
+
+  Promise.all(
+    years.map(function (y) {
+      return fetch("https://github-contributions-api.jogruber.de/v4/" + user + "?y=" + y)
+        .then(function (res) { return res.json(); });
+    })
+  ).then(function (results) {
+
+    // merge and keep only days from the start date up to today
+    const days = results
+      .flatMap(function (r) { return r.contributions || []; })
+      .map(function (d) { return { date: new Date(d.date + "T00:00:00"), level: d.level }; })
+      .filter(function (d) { return d.date >= startDate && d.date <= today; })
+      .sort(function (a, b) { return a.date - b.date; });
+
+    if (!days.length) return;
+
+    // align the grid to the sunday on/before the start date
+    const gridStart = new Date(startDate);
+    gridStart.setDate(gridStart.getDate() - gridStart.getDay());
+
+    const oneDay = 86400000;
+
+    days.forEach(function (d) {
+      const cell = document.createElement("div");
+      cell.className = "github-day";
+      cell.style.backgroundColor = levelColors[d.level] || levelColors[0];
+      cell.style.gridRow = (d.date.getDay() + 1);
+      cell.style.gridColumn = Math.floor((d.date - gridStart) / oneDay / 7) + 1;
+      cell.title = d.date.toISOString().slice(0, 10);
+      githubGraph.appendChild(cell);
+    });
+
+  }).catch(function () {
+    // fallback: static full-year image if the api is unavailable
+    githubGraph.outerHTML =
+      '<img src="https://ghchart.rshah.org/' + user + '" alt="' + user +
+      ' GitHub contributions" style="width:100%;display:block;">';
+  });
+
 }
