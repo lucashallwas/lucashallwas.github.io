@@ -1189,7 +1189,15 @@ main {
 
 .contact-form { margin-bottom: 10px; }
 
-.form-title { margin-bottom: 20px; }
+.form-title { margin-bottom: 10px; }
+
+.contact-cta-text {
+  color: var(--text-tertiary);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
 
 .input-wrapper {
   display: grid;
@@ -1253,6 +1261,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+.form-btn + .form-btn { margin-top: 12px; }
+
+.form-btn-whatsapp { background: var(--accent-success); }
+
+.form-btn-whatsapp:hover { background: #0e9c70; }
 
 .form-btn:disabled:hover { background: var(--accent-teal); }
 
