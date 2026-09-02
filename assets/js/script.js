@@ -148,8 +148,8 @@ if (githubGraph) {
   const startDate = new Date(githubGraph.dataset.githubStart + "T00:00:00");
   const today = new Date();
 
-  // github contribution colors (dark theme)
-  const levelColors = ["var(--jet)", "#0e4429", "#006d32", "#26a641", "#39d353"];
+  // github contribution colors
+  const levelColors = ["var(--segmented-track)", "#9be9a8", "#40c463", "#30a14e", "#216e39"];
 
   // fetch every year from the start year to the current year
   const years = [];
