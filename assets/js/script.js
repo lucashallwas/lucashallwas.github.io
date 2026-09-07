@@ -118,6 +118,64 @@ if (githubToggle && githubCard) {
 
 
 
+// project modal variables
+const projectTriggers = document.querySelectorAll("[data-project-trigger]");
+const projectModal = document.querySelector("[data-project-modal]");
+const projectModalCloseElems = document.querySelectorAll("[data-project-modal-close]");
+const projectModalImg = document.querySelector("[data-project-modal-img]");
+const projectModalCategory = document.querySelector("[data-project-modal-category]");
+const projectModalTitle = document.querySelector("[data-project-modal-title]");
+const projectModalDesc = document.querySelector("[data-project-modal-desc]");
+
+if (projectModal) {
+
+  const openProjectModal = function (trigger) {
+    projectModalImg.src = trigger.dataset.projectImg;
+    projectModalImg.alt = trigger.dataset.projectTitle;
+    projectModalCategory.textContent = trigger.dataset.projectCategory;
+    projectModalTitle.textContent = trigger.dataset.projectTitle;
+
+    projectModalDesc.innerHTML = "";
+
+    const templateName = trigger.dataset.projectTemplate;
+    const template = templateName
+      ? document.querySelector('template[data-project-template="' + templateName + '"]')
+      : null;
+
+    if (template) {
+      projectModalDesc.appendChild(template.content.cloneNode(true));
+    } else {
+      projectModalDesc.textContent = trigger.dataset.projectDesc || "";
+    }
+
+    projectModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeProjectModal = function () {
+    projectModal.classList.remove("active");
+    document.body.style.overflow = "";
+  };
+
+  for (let i = 0; i < projectTriggers.length; i++) {
+    projectTriggers[i].addEventListener("click", function (event) {
+      event.preventDefault();
+      openProjectModal(this);
+    });
+  }
+
+  for (let i = 0; i < projectModalCloseElems.length; i++) {
+    projectModalCloseElems[i].addEventListener("click", closeProjectModal);
+  }
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && projectModal.classList.contains("active")) closeProjectModal();
+  });
+
+}
+
+
+
 // github contribution graph
 const githubGraph = document.querySelector(".github-graph");
 
