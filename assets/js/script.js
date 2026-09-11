@@ -47,9 +47,12 @@ const filterFunc = function (selectedValue) {
 
   for (let i = 0; i < filterItems.length; i++) {
 
+    // an item can belong to more than one category, separated by "|"
+    const categories = (filterItems[i].dataset.category || "").split("|");
+
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
+    } else if (categories.indexOf(selectedValue) !== -1) {
       filterItems[i].classList.add("active");
     } else {
       filterItems[i].classList.remove("active");
@@ -229,6 +232,122 @@ if (githubGraph) {
     githubGraph.outerHTML =
       '<img src="https://ghchart.rshah.org/' + user + '" alt="' + user +
       ' GitHub contributions" style="width:100%;display:block;">';
+  });
+
+}
+
+
+
+// "what i'm doing" carousel dots (mobile only — the track is a plain stack above 768px)
+const serviceList = document.querySelector(".service-list");
+
+if (serviceList) {
+
+  const serviceItems = [...serviceList.querySelectorAll(".service-item")];
+  const dotsWrapper = document.createElement("div");
+  dotsWrapper.className = "service-dots";
+
+  const dots = serviceItems.map(function (item, i) {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "service-dot" + (i === 0 ? " active" : "");
+    dot.setAttribute("aria-label", "Go to card " + (i + 1));
+    dot.addEventListener("click", function () {
+      serviceList.scrollTo({ left: item.offsetLeft - serviceList.offsetLeft, behavior: "smooth" });
+    });
+    dotsWrapper.appendChild(dot);
+    return dot;
+  });
+
+  serviceList.after(dotsWrapper);
+
+  // highlight the dot for whichever card sits closest to the track's center
+  let scrollTick;
+  serviceList.addEventListener("scroll", function () {
+    window.cancelAnimationFrame(scrollTick);
+    scrollTick = window.requestAnimationFrame(function () {
+      const center = serviceList.scrollLeft + serviceList.clientWidth / 2;
+      let closest = 0;
+      let closestDist = Infinity;
+
+      serviceItems.forEach(function (item, i) {
+        const dist = Math.abs(item.offsetLeft - serviceList.offsetLeft + item.offsetWidth / 2 - center);
+        if (dist < closestDist) { closestDist = dist; closest = i; }
+      });
+
+      dots.forEach(function (dot, i) { dot.classList.toggle("active", i === closest); });
+    });
+  }, { passive: true });
+
+}
+
+
+
+// gradual reveal of components on scroll
+const revealSelectors = [
+  ".sidebar",
+  ".github-card",
+  "article > header",
+  ".about-text > *",
+  ".service-item",
+  ".tools-item",
+  ".clients",
+  ".filter-list",
+  ".filter-select-box",
+  ".project-item",
+  ".timeline-item",
+  ".skills-item",
+  ".blog-post-item",
+  ".mapbox",
+  ".contact-form",
+  ".contact-list-item"
+];
+
+const revealElems = document.querySelectorAll(revealSelectors.join(", "));
+
+if (revealElems.length && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+
+  // stagger siblings so each group flows in instead of landing all at once
+  const groupIndex = new Map();
+
+  revealElems.forEach(function (elem) {
+    const parent = elem.parentElement;
+    const index = groupIndex.get(parent) || 0;
+    groupIndex.set(parent, index + 1);
+
+    elem.style.setProperty("--reveal-delay", Math.min(index, 6) * 70 + "ms");
+    elem.setAttribute("data-reveal", "");
+  });
+
+  const revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+
+      entry.target.classList.add("revealed");
+      revealObserver.unobserve(entry.target);
+
+      entry.target.addEventListener("transitionend", function handler(event) {
+        if (event.propertyName !== "opacity") return;
+        entry.target.classList.add("reveal-done");
+        entry.target.style.removeProperty("--reveal-delay");
+        entry.target.removeEventListener("transitionend", handler);
+      });
+    });
+  }, { rootMargin: "0px 0px -40px 0px", threshold: 0.05 });
+
+  revealElems.forEach(function (elem) {
+
+    // the browser may restore a scroll position: anything already scrolled past
+    // never intersects again, so show it right away instead of animating it in
+    const rect = elem.getBoundingClientRect();
+
+    if (rect.height && rect.bottom <= 0) {
+      elem.style.removeProperty("--reveal-delay");
+      elem.classList.add("revealed", "reveal-done");
+      return;
+    }
+
+    revealObserver.observe(elem);
   });
 
 }

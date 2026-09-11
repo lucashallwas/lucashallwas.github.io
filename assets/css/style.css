@@ -74,6 +74,7 @@
 
   /* font-family */
   --ff-poppins: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ff-title: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   /* font-size */
   --fs-1: 24px;
@@ -219,6 +220,42 @@ article.active {
   100% { opacity: 1; }
 }
 
+
+
+/*-----------------------------------*\
+  #REVEAL ON SCROLL
+\*-----------------------------------*/
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s cubic-bezier(.2, .8, .2, 1),
+    transform 0.6s cubic-bezier(.2, .8, .2, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* once the entrance is done, drop the compositor layer and the transform —
+   a lingering transform creates a stacking context that paints over popovers */
+[data-reveal].reveal-done {
+  will-change: auto;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 .h2,
 .h3,
 .h4,
@@ -244,6 +281,15 @@ article.active {
 .clients-title {
   position: relative;
   padding-bottom: 7px;
+}
+
+/* section headings stay light so they sit closer to the body copy */
+.article-title,
+.service-title,
+.clients-title,
+.github-title {
+  font-family: var(--ff-title);
+  font-weight: 200;
 }
 
 .article-title::after,
@@ -565,6 +611,136 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+}
+
+.service-dots { display: none; }
+
+/* on phones the cards become a swipeable carousel instead of a tall stack */
+@media (max-width: 767px) {
+
+  /* cqw lets the track pad itself by exactly the slack around one card,
+     so the first and last card can sit dead center like the middle ones */
+  .service { container-type: inline-size; }
+
+  .service-list {
+    display: flex;
+    grid-template-columns: none;
+    gap: 14px;
+    margin-inline: -15px;
+    padding-inline: calc(10cqw + 15px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: calc(10cqw + 15px);
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+
+  .service-list::-webkit-scrollbar { display: none; }
+
+  .service-item {
+    flex: 0 0 80cqw;
+    scroll-snap-align: center;
+  }
+
+  /* hover lift would fight the swipe on touch */
+  .service-item:hover { transform: none; box-shadow: var(--paper-shadow); }
+
+  .service-dots {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 14px;
+  }
+
+  .service-dot {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: var(--segmented-track);
+    transition: var(--transition-1);
+  }
+
+  .service-dot.active {
+    width: 20px;
+    border-radius: 4px;
+    background: var(--brand-gradient);
+  }
+
+}
+
+
+/**
+ * #tools
+ */
+
+.tools { margin-bottom: 35px; }
+
+.tools-title {
+  font-family: var(--ff-title);
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tools-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--paper-bg);
+  border: 1px solid var(--paper-border);
+  border-radius: 12px;
+  padding: 9px 14px;
+  box-shadow: var(--paper-shadow);
+  color: var(--text-tertiary);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+  transition: var(--transition-1);
+}
+
+.tools-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+  color: var(--text-primary);
+}
+
+.tools-item img {
+  width: 20px;
+  height: 20px;
+  filter: grayscale(1);
+  opacity: 0.75;
+  transition: var(--transition-1);
+}
+
+.tools-item:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* stand-in mark for tools without a bundled logo */
+.tools-mark {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: var(--segmented-track);
+  color: var(--text-tertiary);
+  font-size: 11px;
+  font-weight: var(--fw-500);
+  transition: var(--transition-1);
+}
+
+.tools-item:hover .tools-mark {
+  background: var(--brand-gradient);
+  color: #fff;
 }
 
 
@@ -917,6 +1093,7 @@ main {
 
 .filter-select-box {
   position: relative;
+  z-index: 5;
   margin-bottom: 25px;
 }
 
@@ -1343,7 +1520,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .article-title,
   .service-title,
   .clients-title {
-    font-weight: var(--fw-500);
+    font-weight: 200;
     padding-bottom: 15px;
   }
 
