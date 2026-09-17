@@ -2267,6 +2267,18 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .project-modal-section + .project-modal-section { margin-top: 20px; }
 
+.timeline-text + .project-modal-section { margin-top: 16px; }
+
+.timeline-item .project-modal-section {
+  color: var(--text-tertiary);
+  font-weight: var(--fw-300);
+}
+
+.timeline-item .project-modal-section li strong {
+  color: var(--text-primary);
+  font-weight: var(--fw-500);
+}
+
 .project-modal-section h4 {
   color: var(--text-heading);
   font-size: var(--fs-5);
