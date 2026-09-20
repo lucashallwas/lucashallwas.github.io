@@ -10,7 +10,8 @@
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="icon" href="./assets/images/hallwasfavicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/images/hallwasfavicon.png">
 
   <!--
     - custom css link
@@ -184,19 +185,31 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link  active" data-nav-link="about">
+              <ion-icon class="navbar-link-icon" name="person-outline" aria-hidden="true"></ion-icon>
+              <span>About</span>
+            </button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link="builder">
+              <ion-icon class="navbar-link-icon" name="construct-outline" aria-hidden="true"></ion-icon>
+              <span>Builder</span>
+            </button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Builder</button>
+            <button class="navbar-link" data-nav-link="resume">
+              <ion-icon class="navbar-link-icon" name="document-text-outline" aria-hidden="true"></ion-icon>
+              <span>Resume</span>
+            </button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" data-nav-link="contact">
+              <ion-icon class="navbar-link-icon" name="mail-outline" aria-hidden="true"></ion-icon>
+              <span>Contact</span>
+            </button>
           </li>
 
         </ul>
@@ -502,209 +515,25 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="fintech">
+            <li class="project-item  active" data-filter-item data-category="fintech|hrtech">
               <a href="#"
                 data-project-trigger
-                data-project-title="Finance"
-                data-project-category="FinTech"
-                data-project-img="./assets/images/project-1.jpg"
-                data-project-desc="Add details about this project — the problem, your role, and the impact.">
+                data-project-title="Flash Benefícios"
+                data-project-category="FinTech &middot; HRTech"
+                data-project-img="./assets/images/flash_showcase.png"
+                data-project-template="flash">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                  <img src="./assets/images/flash_showcase.png" alt="flash benefícios" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">Flash Benefícios</h3>
 
-                <p class="project-category">FinTech</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="edtech">
-              <a href="#"
-                data-project-trigger
-                data-project-title="Orizon"
-                data-project-category="EdTech"
-                data-project-img="./assets/images/project-2.png"
-                data-project-desc="Add details about this project — the problem, your role, and the impact.">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">EdTech</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="fintech">
-              <a href="#"
-                data-project-trigger
-                data-project-title="Fundo"
-                data-project-category="FinTech"
-                data-project-img="./assets/images/project-3.jpg"
-                data-project-desc="Add details about this project — the problem, your role, and the impact.">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">FinTech</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="conversational ai">
-              <a href="#"
-                data-project-trigger
-                data-project-title="Brawlhalla"
-                data-project-category="Conversational AI"
-                data-project-img="./assets/images/project-4.png"
-                data-project-desc="Add details about this project — the problem, your role, and the impact.">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Conversational AI</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="hrtech">
-              <a href="#"
-                data-project-trigger
-                data-project-title="DSM."
-                data-project-category="HRTech"
-                data-project-img="./assets/images/project-5.png"
-                data-project-desc="Add details about this project — the problem, your role, and the impact.">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">HRTech</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="edtech">
-              <a href="#"
-                data-project-trigger
-                data-project-title="MetaSpark"
-                data-project-category="EdTech"
-                data-project-img="./assets/images/project-6.png"
-                data-project-desc="Add details about this project — the problem, your role, and the impact.">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">EdTech</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="hrtech">
-              <a href="#"
-                data-project-trigger
-                data-project-title="Summary"
-                data-project-category="HRTech"
-                data-project-img="./assets/images/project-7.png"
-                data-project-desc="Add details about this project — the problem, your role, and the impact.">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">HRTech</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="conversational ai">
-              <a href="#"
-                data-project-trigger
-                data-project-title="Task Manager"
-                data-project-category="Conversational AI"
-                data-project-img="./assets/images/project-8.jpg"
-                data-project-desc="Add details about this project — the problem, your role, and the impact.">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Conversational AI</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="edtech">
-              <a href="#"
-                data-project-trigger
-                data-project-title="Arrival"
-                data-project-category="EdTech"
-                data-project-img="./assets/images/project-9.png"
-                data-project-desc="Add details about this project — the problem, your role, and the impact.">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">EdTech</p>
+                <p class="project-category">FinTech &middot; HRTech</p>
 
               </a>
             </li>
@@ -1238,6 +1067,14 @@
 
   <template data-project-template="bv">
 
+    <div class="project-modal-cta project-modal-cta-top">
+      <a href="https://www.bvirtual.com.br/" target="_blank" rel="noopener noreferrer"
+        class="project-modal-btn project-modal-btn-primary">
+        <ion-icon name="open-outline"></ion-icon>
+        <span>Visit Biblioteca Virtual</span>
+      </a>
+    </div>
+
     <div class="project-modal-section">
       <h4>📌 Overview &amp; Challenge</h4>
       <p>
@@ -1334,7 +1171,132 @@
 
   </template>
 
+  <template data-project-template="flash">
+
+    <div class="project-modal-cta project-modal-cta-top">
+      <a href="https://flashapp.com.br/" target="_blank" rel="noopener noreferrer"
+        class="project-modal-btn project-modal-btn-primary">
+        <ion-icon name="open-outline"></ion-icon>
+        <span>Visit Flash</span>
+      </a>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>📌 Overview &amp; Challenge</h4>
+      <p>
+        Flash is one of Brazil's largest meal &amp; benefits card issuers, serving <strong>1M+ users</strong> and
+        <strong>R$1B in TPV</strong>. As the Product Manager for the HR platform, I owned the checkout journey
+        end to end — from the credit purchase made by HR, through liquidation, to balance custody for the end
+        employee.
+      </p>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>🧩 Migration to the Flash OS Platform</h4>
+      <p>
+        Flash grew through M&amp;A, expanding from meal benefits into corporate expenses, travel management and HR
+        services. Each new module lived as a standalone component until Flash OS brought them together into a single
+        one-stop-shop platform. Benefits was Flash's core business and largest client base, which made it the most
+        sensitive module to move.
+      </p>
+      <ul>
+        <li><strong>Redesign:</strong> Led the redesign of the benefits platform and its integration into Flash OS.
+        </li>
+        <li><strong>Safe rollout:</strong> Ran A/B testing and a gradual rollout to bring the existing user base onto
+          the new platform without disrupting checkout.</li>
+        <li><strong>Cross-sell:</strong> Used the unified experience to drive adoption of the other Flash OS products.
+        </li>
+      </ul>
+      <figure class="project-modal-figure">
+        <img src="./assets/images/flash-os.png" alt="Flash OS unified HR platform" loading="lazy">
+        <figcaption>Benefits integrated into the unified Flash OS platform.</figcaption>
+      </figure>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>💳 New Issuer, New Card Network &amp; 1M Reissued Cards</h4>
+      <p>
+        To comply with new regulatory requirements, Flash changed its card issuer and card network to implement the
+        "voucher" payment rail. I oversaw the transition for the entire benefits base — both the HR admins and the
+        employees — since the legacy cards would stop working once the migration to <strong>VISA</strong> completed.
+      </p>
+      <ul>
+        <li><strong>B2B orchestration:</strong> Organized the transition across <strong>50k+ companies</strong> and
+          <strong>600k+ employees</strong>.</li>
+        <li><strong>Reissuance at scale:</strong> <strong>1M cards</strong> issued under the new network.</li>
+        <li><strong>Balance migration:</strong> Coordinated the migration of employee balances between issuers with no
+          loss of funds or access.</li>
+      </ul>
+      <figure class="project-modal-figure">
+        <img src="./assets/images/flash_card.jpg" alt="Flash VISA benefits card" loading="lazy">
+        <figcaption>The reissued Flash card on the new VISA network.</figcaption>
+      </figure>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>📈 Business Impact</h4>
+      <ul>
+        <li><strong>Performance &amp; Efficiency:</strong> 130% improvement in benefits order processing performance
+          for large enterprises, directly impacting the HR experience at checkout.</li>
+        <li><strong>Growth &amp; Retention:</strong> 21% growth in TPV and a 46% reduction in contact rate —
+          simultaneous gains in adoption and perceived product quality.</li>
+        <li><strong>Active employees:</strong> During my time at Flash, a joint effort grew the active employee base
+          from 600k to 1 million.</li>
+      </ul>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>💡 Key PM Contributions</h4>
+      <div class="project-modal-tags">
+        <span class="project-modal-tag">Payments &amp; Checkout</span>
+        <span class="project-modal-tag">Balance Custody &amp; Liquidation</span>
+        <span class="project-modal-tag">Platform Migration</span>
+        <span class="project-modal-tag">Card Issuing &amp; Network Change</span>
+        <span class="project-modal-tag">Regulatory Compliance</span>
+        <span class="project-modal-tag">A/B Testing &amp; Gradual Rollout</span>
+      </div>
+    </div>
+
+    <div class="project-modal-achievements">
+
+      <div class="achievement-item">
+        <span class="achievement-number">+130%</span>
+        <span class="achievement-label">Order processing performance</span>
+      </div>
+
+      <div class="achievement-item">
+        <span class="achievement-number">+21%</span>
+        <span class="achievement-label">TPV growth</span>
+      </div>
+
+      <div class="achievement-item">
+        <span class="achievement-number">-46%</span>
+        <span class="achievement-label">Contact rate</span>
+      </div>
+
+      <div class="achievement-item">
+        <span class="achievement-number">1M</span>
+        <span class="achievement-label">Cards reissued on VISA</span>
+      </div>
+
+      <div class="achievement-item achievement-item-wide">
+        <span class="achievement-number">600k → 1M</span>
+        <span class="achievement-label">Active employees during my tenure</span>
+      </div>
+
+    </div>
+
+  </template>
+
   <template data-project-template="wizme">
+
+    <div class="project-modal-cta project-modal-cta-top">
+      <a href="https://www.wizard.com.br/diferenciais/aplicativo-wizme/" target="_blank" rel="noopener noreferrer"
+        class="project-modal-btn project-modal-btn-primary">
+        <ion-icon name="open-outline"></ion-icon>
+        <span>Visit Wizard's Wiz Me</span>
+      </a>
+    </div>
 
     <div class="project-modal-section">
       <h4>📌 Overview &amp; Challenge</h4>
