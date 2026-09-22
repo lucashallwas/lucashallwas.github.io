@@ -942,6 +942,42 @@
             <li class="blog-post-item">
               <a href="#"
                 data-project-trigger
+                data-project-title="Amanda Hallwas - Fit Pro"
+                data-project-category="0 to 1 &middot; Fitness Tech"
+                data-project-img="./assets/images/amanda_hallwas_showcase.png"
+                data-project-template="amandahallwas">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/amanda_hallwas_showcase.png" alt="Amanda Hallwas personal trainer web dashboard and mobile app"
+                    loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">0 to 1</p>
+
+                    <span class="dot"></span>
+
+                    <p class="blog-category">Fitness Tech</p>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Amanda Hallwas - Fit Pro</h3>
+
+                  <p class="blog-text">
+                    A vibecoded ecosystem for a personal trainer: an SEO-optimized landing page to showcase her work
+                    and a multitenant app to manage trainees — scheduling, payments and progress tracking. Now
+                    running with 70+ active users.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#"
+                data-project-trigger
                 data-project-title="Zuno"
                 data-project-category="Open Source &middot; Desktop App"
                 data-project-img="./assets/images/zuno_showcase.png"
@@ -1367,7 +1403,103 @@
 
   </template>
 
+  <template data-project-template="amandahallwas">
+
+    <div class="project-modal-cta project-modal-cta-top">
+      <a href="https://amandahallwas.vercel.app/" target="_blank" rel="noopener noreferrer"
+        class="project-modal-btn project-modal-btn-primary">
+        <ion-icon name="open-outline"></ion-icon>
+        <span>Visit Amanda Hallwas</span>
+      </a>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>📌 Overview &amp; Challenge</h4>
+      <p>
+        My sister is a fitness instructor, and coordinating her trainees — schedules, payments, workout plans,
+        progress check-ins — was all happening by hand across spreadsheets and WhatsApp. I built her a small
+        product ecosystem from scratch: a public landing page to bring in and convert new leads, and a private
+        app for her to actually run the business day to day. I owned <strong>product direction, app development
+        and go-to-market</strong> end to end.
+      </p>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>🌐 The Landing Page</h4>
+      <p>
+        A showcase site built to be found and to convert — fully optimized for Google indexing, with analytics
+        instrumented from day one so every visit, click and booking request is measurable.
+      </p>
+      <ul>
+        <li><strong>SEO-first build:</strong> semantic structure, metadata and performance tuned for organic
+          discovery rather than paid reach alone.</li>
+        <li><strong>Analytics implementation:</strong> event tracking wired in to see what actually drives a
+          scheduled session, not just traffic.</li>
+      </ul>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>📱 The Trainer App</h4>
+      <p>
+        The core of the ecosystem: a multitenant app so the same platform can scale to other trainers later,
+        built entirely on the Google stack.
+      </p>
+      <ul>
+        <li><strong>Payments:</strong> billing instructions and plan status per trainee, replacing manual
+          collection.</li>
+        <li><strong>Class scheduling:</strong> booking and confirmation flow for weekly sessions.</li>
+        <li><strong>Progress tracking:</strong> physical assessments and workout history logged per trainee, so
+          the trainer can follow fitness progress over time.</li>
+        <li><strong>Multitenant architecture:</strong> Firebase Auth and Firebase Storage underpin isolated
+          trainer/trainee data, keeping the platform ready to onboard more instructors without a rebuild.</li>
+      </ul>
+      <figure class="project-modal-figure">
+        <img src="./assets/images/amanda_hallwas_showcase.png" alt="Amanda Hallwas web dashboard and trainee mobile app" loading="lazy">
+        <figcaption>Trainer web dashboard alongside the trainee mobile app — schedule, financials and progress in one place.</figcaption>
+      </figure>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>📈 Impact</h4>
+      <ul>
+        <li><strong>0 to 1:</strong> shipped a fully vibecoded product ecosystem — landing page plus multitenant
+          app — from a real, personal problem to a live business tool.</li>
+        <li><strong>Adoption:</strong> 70+ active users managing their training relationship entirely through the
+          app.</li>
+        <li><strong>Operational shift:</strong> moved the trainer off spreadsheets and manual messaging onto a
+          single system for payments, scheduling and progress.</li>
+      </ul>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>💡 Key Contributions</h4>
+      <div class="project-modal-tags">
+        <span class="project-modal-tag">Product Direction (0 to 1)</span>
+        <span class="project-modal-tag">App Development</span>
+        <span class="project-modal-tag">Go-to-Market</span>
+        <span class="project-modal-tag">SEO &amp; Analytics</span>
+        <span class="project-modal-tag">Firebase Auth &amp; Storage</span>
+        <span class="project-modal-tag">Multitenant Architecture</span>
+      </div>
+    </div>
+
+  </template>
+
   <template data-project-template="zuno">
+
+    <div class="project-modal-cta project-modal-cta-top">
+      <a href="https://zuno.fayzan.xyz/" target="_blank" rel="noopener noreferrer"
+        class="project-modal-btn project-modal-btn-primary">
+        <ion-icon name="open-outline"></ion-icon>
+        <span>Visit Zuno</span>
+      </a>
+
+      <a href="https://github.com/noFAYZ/zuno" target="_blank" rel="noopener noreferrer"
+        class="project-modal-btn project-modal-btn-ghost">
+        <ion-icon name="logo-github"></ion-icon>
+        <span>View on GitHub</span>
+      </a>
+    </div>
 
     <div class="project-modal-section">
       <h4>📌 Overview</h4>
@@ -1416,20 +1548,6 @@
         <span class="project-modal-tag">Last.fm Integration</span>
         <span class="project-modal-tag">macOS Auth Persistence</span>
       </div>
-    </div>
-
-    <div class="project-modal-cta">
-      <a href="https://zuno.fayzan.xyz/" target="_blank" rel="noopener noreferrer"
-        class="project-modal-btn project-modal-btn-primary">
-        <ion-icon name="open-outline"></ion-icon>
-        <span>Visit Zuno</span>
-      </a>
-
-      <a href="https://github.com/noFAYZ/zuno" target="_blank" rel="noopener noreferrer"
-        class="project-modal-btn project-modal-btn-ghost">
-        <ion-icon name="logo-github"></ion-icon>
-        <span>View on GitHub</span>
-      </a>
     </div>
 
   </template>
