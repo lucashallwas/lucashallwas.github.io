@@ -239,48 +239,7 @@ if (githubGraph) {
 
 
 
-// "what i'm doing" carousel dots (mobile only — the track is a plain stack above 768px)
-const serviceList = document.querySelector(".service-list");
 
-if (serviceList) {
-
-  const serviceItems = [...serviceList.querySelectorAll(".service-item")];
-  const dotsWrapper = document.createElement("div");
-  dotsWrapper.className = "service-dots";
-
-  const dots = serviceItems.map(function (item, i) {
-    const dot = document.createElement("button");
-    dot.type = "button";
-    dot.className = "service-dot" + (i === 0 ? " active" : "");
-    dot.setAttribute("aria-label", "Go to card " + (i + 1));
-    dot.addEventListener("click", function () {
-      serviceList.scrollTo({ left: item.offsetLeft - serviceList.offsetLeft, behavior: "smooth" });
-    });
-    dotsWrapper.appendChild(dot);
-    return dot;
-  });
-
-  serviceList.after(dotsWrapper);
-
-  // highlight the dot for whichever card sits closest to the track's center
-  let scrollTick;
-  serviceList.addEventListener("scroll", function () {
-    window.cancelAnimationFrame(scrollTick);
-    scrollTick = window.requestAnimationFrame(function () {
-      const center = serviceList.scrollLeft + serviceList.clientWidth / 2;
-      let closest = 0;
-      let closestDist = Infinity;
-
-      serviceItems.forEach(function (item, i) {
-        const dist = Math.abs(item.offsetLeft - serviceList.offsetLeft + item.offsetWidth / 2 - center);
-        if (dist < closestDist) { closestDist = dist; closest = i; }
-      });
-
-      dots.forEach(function (dot, i) { dot.classList.toggle("active", i === closest); });
-    });
-  }, { passive: true });
-
-}
 
 
 
