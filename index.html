@@ -469,6 +469,10 @@
               <button data-filter-btn>FinTech</button>
             </li>
 
+            <li class="filter-item">
+              <button data-filter-btn>HealthTech</button>
+            </li>
+
           </ul>
 
           <div class="filter-select-box">
@@ -505,11 +509,38 @@
                 <button data-select-item>FinTech</button>
               </li>
 
+              <li class="select-item">
+                <button data-select-item>HealthTech</button>
+              </li>
+
             </ul>
 
           </div>
 
           <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="fintech|healthtech">
+              <a href="#"
+                data-project-trigger
+                data-project-title="Cartão de TODOS"
+                data-project-category="FinTech &middot; HealthTech"
+                data-project-img="./assets/images/CDT.png"
+                data-project-template="cartao">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/CDT.png" alt="Cartão de TODOS" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Cartão de TODOS</h3>
+
+                <p class="project-category">FinTech &middot; HealthTech</p>
+
+              </a>
+            </li>
 
             <li class="project-item  active" data-filter-item data-category="edtech">
               <a href="#"
@@ -1142,6 +1173,133 @@
   <!--
     - project modal content templates
   -->
+
+  <template data-project-template="cartao">
+
+    <div class="project-modal-cta project-modal-cta-top">
+      <a href="https://www.cartaodetodos.com.br/" target="_blank" rel="noopener noreferrer"
+        class="project-modal-btn project-modal-btn-primary">
+        <ion-icon name="open-outline"></ion-icon>
+        <span>Conheça o Cartão de TODOS</span>
+      </a>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>📌 Overview &amp; Ecosystem Scale</h4>
+      <p>
+        <strong>Cartão de TODOS</strong> is a leading healthtech and the operator of Brazil's largest secondary healthcare
+        ecosystem, anchored by a network of over <strong>530 AmorSaúde clinics</strong> across the country. Present in every
+        Brazilian municipality with more than 100,000 residents, the ecosystem conducts over <strong>1.8 million medical
+        consultations monthly</strong> and serves more than <strong>7 million active subscribers</strong>.
+      </p>
+      <p>
+        Historically structured as an affordable healthcare and benefit card, Cartão de TODOS relied primarily on its nationwide
+        clinic footprint and physical sales network. Up until 2024, <strong>over 90% of the company's CAC</strong> was
+        generated exclusively through door-to-door customer acquisition.
+      </p>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>🚀 The Challenge: Product-Led Growth (PLG) Strategy</h4>
+      <p>
+        My first strategic challenge was architecting and executing a <strong>Product-Led Growth (PLG)</strong> strategy to attract
+        and convert a younger, digital-first audience into the ecosystem.
+      </p>
+      <p>
+        At the time, the Cartão de TODOS mobile app was vastly underutilized, functioning predominantly as a basic scheduling utility
+        for doctor appointments. We set out to fundamentally reposition the product from an occasional booking tool into an
+        indispensable <strong>daily companion for Brazilian families</strong>—designed to solve the core recurring financial and
+        lifestyle needs of classes C and D.
+      </p>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>💳 Closed-Loop Digital Wallet, Cashback &amp; MiniApps Architecture</h4>
+      <p>
+        To transform Cartão de TODOS into an everyday financial habit and drive recurring value, we built an end-to-end digital
+        financial layer and modular platform:
+      </p>
+      <ul>
+        <li><strong>Closed-Loop Payments Wallet:</strong> Conceived and launched a proprietary digital payments wallet built on a
+          closed-loop rail, positioning Cartão de TODOS as a primary payment method for recurring monthly subscriptions, clinic
+          visits, and everyday expenses.</li>
+        <li><strong>10k+ Merchant Cashback Network:</strong> Established commercial integrations with more than 10,000 partner
+          merchants, enabling users to pay with their digital wallet and earn recurring cashback on essential goods and services.</li>
+        <li><strong>Tier-1 Brand Partnerships:</strong> Integrated major national brands into the ecosystem, including
+          <strong>RaiaDrogasil</strong> (pharmacy &amp; medicine discounts), <strong>Ultragaz</strong> (cooking gas credits), and
+          <strong>TIM</strong> (telecom mobile recharges with cashback).</li>
+        <li><strong>Super App Micro-Frontend &amp; MiniApps:</strong> Repositioned the mobile app as a unified gateway to the group's
+          wider ecosystem (including education and continuous healthcare) by implementing a micro-frontend architecture supporting
+          modular, lightweight <strong>MiniApps</strong>.</li>
+      </ul>
+      <figure class="project-modal-figure">
+        <img src="./assets/images/cartao_wallet_ecosystem.png" alt="Cartão de TODOS closed-loop wallet and partner ecosystem" loading="lazy">
+        <figcaption>Cartão de TODOS closed-loop payments wallet, 10k+ partner cashback network (RaiaDrogasil, Ultragaz, TIM), and MiniApps architecture.</figcaption>
+      </figure>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>📈 Business Impact &amp; Growth</h4>
+      <ul>
+        <li><strong>Scale &amp; Engagement:</strong> Scaled the Cartão de TODOS mobile app to <strong>2M Monthly Active Users (MAU)</strong>.</li>
+        <li><strong>TPV Acceleration:</strong> Drove a <strong>3x increase in TPV</strong> (Total Processing Volume) across the closed-loop wallet rail.</li>
+        <li><strong>Channel Diversification:</strong> Transformed the mobile app into the group's <strong>second largest customer acquisition channel</strong>, driving <strong>1/4 (25%) of all new subscriber acquisitions</strong> and sharply reducing reliance on traditional door-to-door channels.</li>
+      </ul>
+    </div>
+
+    <div class="project-modal-section">
+      <h4>💡 Key PM Contributions</h4>
+      <div class="project-modal-tags">
+        <span class="project-modal-tag">Product-Led Growth (PLG)</span>
+        <span class="project-modal-tag">Closed-Loop Digital Wallet</span>
+        <span class="project-modal-tag">HealthTech &amp; FinTech Strategy</span>
+        <span class="project-modal-tag">Micro-Frontend &amp; MiniApps</span>
+        <span class="project-modal-tag">Cashback &amp; Partner Network</span>
+        <span class="project-modal-tag">Super App Ecosystem</span>
+        <span class="project-modal-tag">User Acquisition at Scale</span>
+      </div>
+    </div>
+
+    <div class="project-modal-achievements">
+
+      <div class="achievement-item">
+        <span class="achievement-number">2M</span>
+        <span class="achievement-label">Monthly Active Users (MAU)</span>
+      </div>
+
+      <div class="achievement-item">
+        <span class="achievement-number">3x</span>
+        <span class="achievement-label">TPV growth on closed-loop rail</span>
+      </div>
+
+      <div class="achievement-item">
+        <span class="achievement-number">#2</span>
+        <span class="achievement-label">Largest acquisition channel</span>
+      </div>
+
+      <div class="achievement-item">
+        <span class="achievement-number">25%</span>
+        <span class="achievement-label">Of all new subscriber acquisitions</span>
+      </div>
+
+      <div class="achievement-item">
+        <span class="achievement-number">10k+</span>
+        <span class="achievement-label">Partner merchants &amp; cashback</span>
+      </div>
+
+      <div class="achievement-item">
+        <span class="achievement-number">530+</span>
+        <span class="achievement-label">AmorSaúde clinics nationwide</span>
+      </div>
+
+      <div class="achievement-item achievement-item-wide">
+        <span class="achievement-number">7M+ Subscribers &middot; 1.8M Consultations/mo</span>
+        <span class="achievement-label">Largest secondary healthcare ecosystem in Brazil</span>
+      </div>
+
+    </div>
+
+  </template>
 
   <template data-project-template="bv">
 
