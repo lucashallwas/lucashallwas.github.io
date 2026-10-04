@@ -75,7 +75,7 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Email</p>
+              <p class="contact-title" data-i18n="sidebar.email">Email</p>
 
               <a href="mailto:joao.hallwasbueno@outlook.com" class="contact-link">joao.hallwasbueno@outlook.com</a>
             </div>
@@ -89,7 +89,7 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Phone</p>
+              <p class="contact-title" data-i18n="sidebar.phone">Phone</p>
 
               <a href="tel:+5511975838483" class="contact-link">+55 11 97583-8483</a>
             </div>
@@ -103,9 +103,9 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Location</p>
+              <p class="contact-title" data-i18n="sidebar.location">Location</p>
 
-              <address>São Paulo, Brazil</address>
+              <address data-i18n="sidebar.city">São Paulo, Brazil</address>
             </div>
 
           </li>
@@ -141,6 +141,11 @@
           </li>
 
         </ul>
+
+        <div class="lang-toggle" data-lang-toggle role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang-toggle-btn active" data-lang-option="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-toggle-btn" data-lang-option="pt" aria-pressed="false">PT</button>
+        </div>
 
       </div>
 
@@ -187,7 +192,7 @@
           <li class="navbar-item">
             <button class="navbar-link  active" data-nav-link="about">
               <ion-icon class="navbar-link-icon" name="person-outline" aria-hidden="true"></ion-icon>
-              <span>About</span>
+              <span data-i18n="nav.about">About</span>
             </button>
           </li>
 
@@ -201,14 +206,14 @@
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link="resume">
               <ion-icon class="navbar-link-icon" name="document-text-outline" aria-hidden="true"></ion-icon>
-              <span>Resume</span>
+              <span data-i18n="nav.resume">Resume</span>
             </button>
           </li>
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link="contact">
               <ion-icon class="navbar-link-icon" name="mail-outline" aria-hidden="true"></ion-icon>
-              <span>Contact</span>
+              <span data-i18n="nav.contact">Contact</span>
             </button>
           </li>
 
@@ -227,22 +232,22 @@
       <article class="about  active" data-page="about">
 
         <section class="about-text">
-          <h2 class="h2 article-title">About me</h2>
+          <h2 class="h2 article-title" data-i18n="about.heading">About me</h2>
 
-          <p>
+          <p data-i18n="about.p1">
             I've been a Product Manager for over 8 years, but what really drives me is technical curiosity and delivering
             real value. I've navigated everything from B2B to B2C (Fintech, Edtech, Conversational AI) and have built
             more than 7 products completely from scratch (0 to 1).
           </p>
 
-          <p>
+          <p data-i18n="about.p2">
             I don't just stay in the realm of theory: I use AI in my daily workflow to validate hypotheses at lightning
             speed—testing ideas with Claude Code, AI Studio, Replit, or Emergent. I have a strong technical foundation
             and leverage backend tools (with a special affinity for Firebase) to prototype and structure systems that go
             from concept to launch seamlessly.
           </p>
 
-          <p>
+          <p data-i18n="about.p3">
             My background ranges from leading products responsible for 80% of a business unit's revenue at the world's
             largest education company to building superapps that impacted millions of users through PLG strategies. I
             speak the same language as Engineering—direct and detailed—and my product decisions are grounded in deep data
@@ -257,7 +262,7 @@
 
         <section class="clients">
 
-          <h3 class="h3 clients-title">Companies I've worked with</h3>
+          <h3 class="h3 clients-title" data-i18n="clients.title">Companies I've worked with</h3>
 
           <div class="clients-marquee">
             <div class="clients-track">
@@ -324,7 +329,7 @@
 
         <section class="service">
 
-          <h3 class="h3 service-title">What i'm doing</h3>
+          <h3 class="h3 service-title" data-i18n="service.title">What i'm doing</h3>
 
           <div class="service-marquee">
             <div class="service-track">
@@ -336,8 +341,8 @@
                     <img src="./assets/images/icon-design.png" alt="product management icon" width="40">
                   </div>
                   <div class="service-content-box">
-                    <h4 class="h4 service-item-title">Product Management</h4>
-                    <p class="service-item-text">
+                    <h4 class="h4 service-item-title" data-i18n="service.pm.title">Product Management</h4>
+                    <p class="service-item-text" data-i18n="service.pm.desc">
                       Leading products end-to-end as a Specialist / Group PM — from strategy and roadmap to delivery.
                     </p>
                   </div>
@@ -348,8 +353,8 @@
                     <img src="./assets/images/icon-dev.png" alt="PM builder icon" width="40">
                   </div>
                   <div class="service-content-box">
-                    <h4 class="h4 service-item-title">PM Builder</h4>
-                    <p class="service-item-text">
+                    <h4 class="h4 service-item-title" data-i18n="service.builder.title">PM Builder</h4>
+                    <p class="service-item-text" data-i18n="service.builder.desc">
                       Building applications hands-on and validating hypotheses with fast, real-world experiments.
                     </p>
                   </div>
@@ -360,8 +365,8 @@
                     <img src="./assets/images/learning-removebg-preview.png" alt="continuous learning icon" width="40">
                   </div>
                   <div class="service-content-box">
-                    <h4 class="h4 service-item-title">Continuous Learning</h4>
-                    <p class="service-item-text">
+                    <h4 class="h4 service-item-title" data-i18n="service.learning.title">Continuous Learning</h4>
+                    <p class="service-item-text" data-i18n="service.learning.desc">
                       Endlessly curious — always reading, taking courses, and exploring new ideas and technologies.
                     </p>
                   </div>
@@ -372,8 +377,8 @@
                     <img src="./assets/images/guitar-removebg-preview.png" alt="music icon" width="40">
                   </div>
                   <div class="service-content-box">
-                    <h4 class="h4 service-item-title">Music</h4>
-                    <p class="service-item-text">
+                    <h4 class="h4 service-item-title" data-i18n="service.music.title">Music</h4>
+                    <p class="service-item-text" data-i18n="service.music.desc">
                       Off the clock, I love listening to music — it fuels my focus, creativity, and everyday mood.
                     </p>
                   </div>
@@ -388,8 +393,8 @@
                     <img src="./assets/images/icon-design.png" alt="" aria-hidden="true" width="40">
                   </div>
                   <div class="service-content-box">
-                    <h4 class="h4 service-item-title">Product Management</h4>
-                    <p class="service-item-text">
+                    <h4 class="h4 service-item-title" data-i18n="service.pm.title">Product Management</h4>
+                    <p class="service-item-text" data-i18n="service.pm.desc">
                       Leading products end-to-end as a Specialist / Group PM — from strategy and roadmap to delivery.
                     </p>
                   </div>
@@ -400,8 +405,8 @@
                     <img src="./assets/images/icon-dev.png" alt="" aria-hidden="true" width="40">
                   </div>
                   <div class="service-content-box">
-                    <h4 class="h4 service-item-title">PM Builder</h4>
-                    <p class="service-item-text">
+                    <h4 class="h4 service-item-title" data-i18n="service.builder.title">PM Builder</h4>
+                    <p class="service-item-text" data-i18n="service.builder.desc">
                       Building applications hands-on and validating hypotheses with fast, real-world experiments.
                     </p>
                   </div>
@@ -412,8 +417,8 @@
                     <img src="./assets/images/learning-removebg-preview.png" alt="" aria-hidden="true" width="40">
                   </div>
                   <div class="service-content-box">
-                    <h4 class="h4 service-item-title">Continuous Learning</h4>
-                    <p class="service-item-text">
+                    <h4 class="h4 service-item-title" data-i18n="service.learning.title">Continuous Learning</h4>
+                    <p class="service-item-text" data-i18n="service.learning.desc">
                       Endlessly curious — always reading, taking courses, and exploring new ideas and technologies.
                     </p>
                   </div>
@@ -424,8 +429,8 @@
                     <img src="./assets/images/guitar-removebg-preview.png" alt="" aria-hidden="true" width="40">
                   </div>
                   <div class="service-content-box">
-                    <h4 class="h4 service-item-title">Music</h4>
-                    <p class="service-item-text">
+                    <h4 class="h4 service-item-title" data-i18n="service.music.title">Music</h4>
+                    <p class="service-item-text" data-i18n="service.music.desc">
                       Off the clock, I love listening to music — it fuels my focus, creativity, and everyday mood.
                     </p>
                   </div>
@@ -445,7 +450,7 @@
 
         <section class="projects">
 
-          <h3 class="h3 service-title">Portfolio</h3>
+          <h3 class="h3 service-title" data-i18n="portfolio.title">Portfolio</h3>
 
           <ul class="filter-list">
 
@@ -628,7 +633,7 @@
       <article class="resume" data-page="resume">
 
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title" data-i18n="resume.heading">Resume</h2>
         </header>
 
         <section class="timeline">
@@ -638,18 +643,18 @@
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Education</h3>
+            <h3 class="h3" data-i18n="resume.education.heading">Education</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Fatec São Paulo — Computer Networks</h4>
+              <h4 class="h4 timeline-item-title" data-i18n="resume.edu1.title">Fatec São Paulo — Computer Networks</h4>
 
               <span>2021 — 2025</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.edu1.desc">
                 Technologist degree in Computer Networks.
               </p>
 
@@ -657,11 +662,11 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Fatec Jundiaí — Information Technology Management</h4>
+              <h4 class="h4 timeline-item-title" data-i18n="resume.edu2.title">Fatec Jundiaí — Information Technology Management</h4>
 
               <span>2017 — 2019</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.edu2.desc">
                 Technologist degree in Information Technology Management.
               </p>
 
@@ -669,11 +674,11 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">ETEC — São Paulo State Technical School</h4>
+              <h4 class="h4 timeline-item-title" data-i18n="resume.edu3.title">ETEC — São Paulo State Technical School</h4>
 
               <span>2015 — 2016</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.edu3.desc">
                 IT Technician, Software Technology.
               </p>
 
@@ -690,7 +695,7 @@
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Experience</h3>
+            <h3 class="h3" data-i18n="resume.experience.heading">Experience</h3>
           </div>
 
           <ol class="timeline-list">
@@ -701,13 +706,13 @@
 
               <span>Aug 2025 — Present</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp1.desc">
                 After playing a foundational role in building the company's product and data culture, I was
                 entrusted with stepping up as Group Product Manager, leading a 12-person cross-functional team with
                 Product and Engineering reports.
               </p>
 
-              <div class="project-modal-section">
+              <div class="project-modal-section" data-i18n="resume.exp1.section1">
                 <h4>Strategic Challenges</h4>
                 <ul>
                   <li><strong>Digital Transformation:</strong> Repositioning the Cartão de TODOS app to become the
@@ -721,7 +726,7 @@
                 </ul>
               </div>
 
-              <div class="project-modal-section">
+              <div class="project-modal-section" data-i18n="resume.exp1.section2">
                 <h4>Product &amp; Financial Infrastructure Deliverables</h4>
                 <ul>
                   <li><strong>Payment Methods:</strong> Developed and launched a closed-loop payment circuit in the
@@ -742,12 +747,12 @@
 
               <span>Jan 2024 — Sep 2025</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp2.desc">
                 Product Manager responsible for developing the Cartão de TODOS super-app (7M+ users), leading the
                 acquisition and engagement front end-to-end:
               </p>
 
-              <div class="project-modal-section">
+              <div class="project-modal-section" data-i18n="resume.exp2.section1">
                 <ul>
                   <li><strong>PLG:</strong> Defined and executed the PLG strategy for user acquisition, resulting in
                     a +10x increase in the freemium-to-premium conversion rate, plus instrumenting an MMP for
@@ -768,12 +773,12 @@
 
               <span>Jul 2022 — Dec 2023</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp3.desc">
                 Product Manager for Flash's Benefits BU, responsible for the complete lifecycle of the flexible
                 benefits SaaS product, from sign-up to checkout.
               </p>
 
-              <div class="project-modal-section">
+              <div class="project-modal-section" data-i18n="resume.exp3.section1">
                 <ul>
                   <li><strong>FlashOS Ecosystem:</strong> Led the integration of the flexible benefits product into
                     the FlashOS ecosystem, unifying the HR platform and enabling a consolidated client experience by
@@ -801,7 +806,7 @@
 
               <span>Sep 2021 — Jul 2022</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp4.desc">
                 Managed development and support of smart contacts (WhatsApp, Instagram, Google Business Messages, Chat,
                 Teams) for clients like Contabilizei, Creditas, Tempo Assist and Toro, leading an 8-person
                 cross-functional team. Delivered 18 smart contacts covering 60% of insurers' support request volume,
@@ -816,7 +821,7 @@
 
               <span>Aug 2020 — Aug 2021</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp5.desc">
                 Led agile project squads across the product lifecycle from concept to go-to-market, tracking DAU, MAU,
                 conversion, churn and retention, ran the platform sustainment vertical with engineering, partnered with
                 performance marketing on acquisition (MMP implementation), and supported the Afterverse games M&amp;A
@@ -831,7 +836,7 @@
 
               <span>Feb 2020 — Aug 2020</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp6.desc">
                 Led the higher-education product vertical — lifecycle management, backlog activation, external tech
                 vendor management, and cross-functional alignment with sales — driving the Virtual Library product
                 responsible for 80% of the higher-ed BU's revenue.
@@ -845,7 +850,7 @@
 
               <span>Jun 2019 — Feb 2020</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp7.desc">
                 Ran quantitative and qualitative analysis of the higher-education business, led technical refactoring
                 of the digital product portfolio, tracked product and team performance, and reported directly to
                 company leadership; helped restructure the higher-ed BU and regionalize 3 global Pearson products.
@@ -859,7 +864,7 @@
 
               <span>Aug 2018 — Jun 2019</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp8.desc">
                 Product Owner for new digital products under the Wizard brand, bridging business, tech and the
                 franchise network — sourcing outsourcing partners, running multidisciplinary squads, gathering field
                 requirements from schools and franchisees, and reporting directly to the VP of Franchising.
@@ -873,7 +878,7 @@
 
               <span>Aug 2017 — Aug 2018</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp9.desc">
                 Supported and administered digital platforms for the English and higher-education divisions — usage
                 and stability reporting, project forecasting, QA of new products, vendor interfacing, and coordination
                 of an online English-teaching platform for municipal partnerships.
@@ -887,7 +892,7 @@
 
               <span>Aug 2016 — Aug 2017</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp10.desc">
                 Responsible for supporting the implementation of platforms and integrations using the .NET Framework
                 and the MVC pattern.
               </p>
@@ -900,7 +905,7 @@
 
               <span>Feb 2014 — Nov 2014</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp11.desc">
                 Internship program.
               </p>
 
@@ -923,7 +928,7 @@
       <article class="blog" data-page="builder">
 
         <header>
-          <h2 class="h2 article-title">Builder</h2>
+          <h2 class="h2 article-title" data-i18n="builder.heading">Builder</h2>
         </header>
 
 
@@ -933,7 +938,7 @@
 
         <section class="tools">
 
-          <h3 class="h3 tools-title">Builder tools I'm familiar with</h3>
+          <h3 class="h3 tools-title" data-i18n="builder.tools.title">Builder tools I'm familiar with</h3>
 
           <ul class="tools-list">
 
@@ -1035,9 +1040,9 @@
                     <p class="blog-category">Fitness Tech</p>
                   </div>
 
-                  <h3 class="h3 blog-item-title">Amanda Hallwas - Fit Pro</h3>
+                  <h3 class="h3 blog-item-title" data-i18n="builder.post.amanda.title">Amanda Hallwas - Fit Pro</h3>
 
-                  <p class="blog-text">
+                  <p class="blog-text" data-i18n="builder.post.amanda.desc">
                     A vibecoded ecosystem for a personal trainer: an SEO-optimized landing page to showcase her work
                     and a multitenant app to manage trainees — scheduling, payments and progress tracking. Now
                     running with 70+ active users.
@@ -1071,9 +1076,9 @@
                     <p class="blog-category">Desktop App</p>
                   </div>
 
-                  <h3 class="h3 blog-item-title">Zuno</h3>
+                  <h3 class="h3 blog-item-title" data-i18n="builder.post.zuno.title">Zuno</h3>
 
-                  <p class="blog-text">
+                  <p class="blog-text" data-i18n="builder.post.zuno.desc">
                     A free, native desktop client for YouTube Music on Windows, macOS and Linux. I owned product
                     direction and QA — most notably the Last.fm scrobbling integration and persistent YouTube auth
                     on macOS.
@@ -1101,7 +1106,7 @@
       <article class="contact" data-page="contact">
 
         <header>
-          <h2 class="h2 article-title">Contact</h2>
+          <h2 class="h2 article-title" data-i18n="contact.heading">Contact</h2>
         </header>
 
         <section class="mapbox" data-mapbox>
@@ -1114,20 +1119,20 @@
 
         <section class="contact-form">
 
-          <h3 class="h3 form-title">Get In Touch</h3>
+          <h3 class="h3 form-title" data-i18n="contact.form.title">Get In Touch</h3>
 
-          <p class="contact-cta-text">
+          <p class="contact-cta-text" data-i18n="contact.cta">
             Have a project in mind or just want to say hi? My inbox is open.
           </p>
 
           <a href="mailto:joao.hallwasbueno@outlook.com" class="form-btn">
             <ion-icon name="paper-plane"></ion-icon>
-            <span>Send Me an Email</span>
+            <span data-i18n="contact.btn.email">Send Me an Email</span>
           </a>
 
           <a href="https://wa.me/5511975838483" target="_blank" rel="noopener noreferrer" class="form-btn form-btn-whatsapp">
             <ion-icon name="logo-whatsapp"></ion-icon>
-            <span>Get in Touch on WhatsApp</span>
+            <span data-i18n="contact.btn.whatsapp">Get in Touch on WhatsApp</span>
           </a>
 
         </section>
@@ -1184,7 +1189,7 @@
       </a>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.cartao.section1">
       <h4>📌 Overview &amp; Ecosystem Scale</h4>
       <p>
         <strong>Cartão de TODOS</strong> is a leading healthtech and the operator of Brazil's largest secondary healthcare
@@ -1199,7 +1204,7 @@
       </p>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.cartao.section2">
       <h4>🚀 The Challenge: Product-Led Growth (PLG) Strategy</h4>
       <p>
         My first strategic challenge was architecting and executing a <strong>Product-Led Growth (PLG)</strong> strategy to attract
@@ -1213,7 +1218,7 @@
       </p>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.cartao.section3">
       <h4>💳 Closed-Loop Digital Wallet, Cashback &amp; MiniApps Architecture</h4>
       <p>
         To transform Cartão de TODOS into an everyday financial habit and drive recurring value, we built an end-to-end digital
@@ -1238,7 +1243,7 @@
       </figure>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.cartao.section4">
       <h4>📈 Business Impact &amp; Growth</h4>
       <ul>
         <li><strong>Scale &amp; Engagement:</strong> Scaled the Cartão de TODOS mobile app to <strong>2M Monthly Active Users (MAU)</strong>.</li>
@@ -1247,7 +1252,7 @@
       </ul>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.cartao.section5">
       <h4>💡 Key PM Contributions</h4>
       <div class="project-modal-tags">
         <span class="project-modal-tag">Product-Led Growth (PLG)</span>
@@ -1260,7 +1265,7 @@
       </div>
     </div>
 
-    <div class="project-modal-achievements">
+    <div class="project-modal-achievements" data-i18n="project.cartao.achievements">
 
       <div class="achievement-item">
         <span class="achievement-number">2M</span>
@@ -1307,11 +1312,11 @@
       <a href="https://www.bvirtual.com.br/" target="_blank" rel="noopener noreferrer"
         class="project-modal-btn project-modal-btn-primary">
         <ion-icon name="open-outline"></ion-icon>
-        <span>Visit Biblioteca Virtual</span>
+        <span data-i18n="project.bv.cta">Visit Biblioteca Virtual</span>
       </a>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.bv.section1">
       <h4>📌 Overview &amp; Challenge</h4>
       <p>
         The Virtual Library was created to transform the traditional model of digital collection consumption and
@@ -1321,7 +1326,7 @@
       </p>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.bv.section2">
       <h4>🔍 Discovery &amp; Market Research</h4>
       <p>Before defining any feature, I conducted in-depth market research and user behavior analysis:</p>
       <ul>
@@ -1335,7 +1340,7 @@
       </ul>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.bv.section3">
       <h4>🚀 From Concept to Launch (Product Vision)</h4>
       <p>Based on the research insights, I defined the product vision, information architecture, and strategic
         roadmap:</p>
@@ -1347,7 +1352,7 @@
       </ul>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.bv.section4">
       <h4>📈 Business &amp; Market Impact</h4>
       <p>The product launch created a significant impact across multiple fronts:</p>
       <ul>
@@ -1370,7 +1375,7 @@
       </ul>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.bv.section5">
       <h4>💡 Key PM Contributions</h4>
       <div class="project-modal-tags">
         <span class="project-modal-tag">Market Research</span>
@@ -1381,7 +1386,7 @@
       </div>
     </div>
 
-    <div class="project-modal-achievements">
+    <div class="project-modal-achievements" data-i18n="project.bv.achievements">
 
       <div class="achievement-item">
         <span class="achievement-number">+80</span>
@@ -1413,11 +1418,11 @@
       <a href="https://flashapp.com.br/" target="_blank" rel="noopener noreferrer"
         class="project-modal-btn project-modal-btn-primary">
         <ion-icon name="open-outline"></ion-icon>
-        <span>Visit Flash</span>
+        <span data-i18n="project.flash.cta">Visit Flash</span>
       </a>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.flash.section1">
       <h4>📌 Overview &amp; Challenge</h4>
       <p>
         Flash is one of Brazil's largest meal &amp; benefits card issuers, serving <strong>1M+ users</strong> and
@@ -1427,7 +1432,7 @@
       </p>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.flash.section2">
       <h4>🧩 Migration to the Flash OS Platform</h4>
       <p>
         Flash grew through M&amp;A, expanding from meal benefits into corporate expenses, travel management and HR
@@ -1449,7 +1454,7 @@
       </figure>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.flash.section3">
       <h4>💳 New Issuer, New Card Network &amp; 1M Reissued Cards</h4>
       <p>
         To comply with new regulatory requirements, Flash changed its card issuer and card network to implement the
@@ -1469,7 +1474,7 @@
       </figure>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.flash.section4">
       <h4>📈 Business Impact</h4>
       <ul>
         <li><strong>Performance &amp; Efficiency:</strong> 130% improvement in benefits order processing performance
@@ -1481,7 +1486,7 @@
       </ul>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.flash.section5">
       <h4>💡 Key PM Contributions</h4>
       <div class="project-modal-tags">
         <span class="project-modal-tag">Payments &amp; Checkout</span>
@@ -1493,7 +1498,7 @@
       </div>
     </div>
 
-    <div class="project-modal-achievements">
+    <div class="project-modal-achievements" data-i18n="project.flash.achievements">
 
       <div class="achievement-item">
         <span class="achievement-number">+130%</span>
@@ -1530,11 +1535,11 @@
       <a href="https://www.wizard.com.br/diferenciais/aplicativo-wizme/" target="_blank" rel="noopener noreferrer"
         class="project-modal-btn project-modal-btn-primary">
         <ion-icon name="open-outline"></ion-icon>
-        <span>Visit Wizard's Wiz Me</span>
+        <span data-i18n="project.wizme.cta">Visit Wizard's Wiz Me</span>
       </a>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.wizme.section1">
       <h4>📌 Overview &amp; Challenge</h4>
       <p>
         At Wizard, I was responsible for the conception and development of the brand's digital products, operating at
@@ -1545,7 +1550,7 @@
       </p>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.wizme.section2">
       <h4>🔍 The Bet: Wizard Interactive</h4>
       <p>
         I led the structuring of <strong>Wizard Interactive</strong>, a pedagogical model grounded in maker culture that
@@ -1555,7 +1560,7 @@
       </p>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.wizme.section3">
       <h4>🚀 Wiz.me — The Student Companion</h4>
       <p>
         <strong>Wiz.me</strong> was the heart of that digital layer: a personal assistant that accompanied the student
@@ -1571,7 +1576,7 @@
       </ul>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.wizme.section4">
       <h4>🧩 Supporting Deliverables</h4>
       <ul>
         <li><strong>WizTab:</strong> A custom tablet application that worked as both a CMS and an interactive reader for
@@ -1581,7 +1586,7 @@
       </ul>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.wizme.section5">
       <h4>📈 Business Impact</h4>
       <p>
         By enabling multi-level student grouping inside a single classroom, we resolved the retention and scalability
@@ -1590,7 +1595,7 @@
       </p>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.wizme.section6">
       <h4>💡 Key PM Contributions</h4>
       <div class="project-modal-tags">
         <span class="project-modal-tag">Product Conception (0 to 1)</span>
@@ -1609,11 +1614,11 @@
       <a href="https://amandahallwas.vercel.app/" target="_blank" rel="noopener noreferrer"
         class="project-modal-btn project-modal-btn-primary">
         <ion-icon name="open-outline"></ion-icon>
-        <span>Visit Amanda Hallwas</span>
+        <span data-i18n="project.amandahallwas.cta">Visit Amanda Hallwas</span>
       </a>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.amandahallwas.section1">
       <h4>📌 Overview &amp; Challenge</h4>
       <p>
         My sister is a fitness instructor, and coordinating her trainees — schedules, payments, workout plans,
@@ -1624,7 +1629,7 @@
       </p>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.amandahallwas.section2">
       <h4>🌐 The Landing Page</h4>
       <p>
         A showcase site built to be found and to convert — fully optimized for Google indexing, with analytics
@@ -1638,7 +1643,7 @@
       </ul>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.amandahallwas.section3">
       <h4>📱 The Trainer App</h4>
       <p>
         The core of the ecosystem: a multitenant app so the same platform can scale to other trainers later,
@@ -1659,7 +1664,7 @@
       </figure>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.amandahallwas.section4">
       <h4>📈 Impact</h4>
       <ul>
         <li><strong>0 to 1:</strong> shipped a fully vibecoded product ecosystem — landing page plus multitenant
@@ -1671,7 +1676,7 @@
       </ul>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.amandahallwas.section5">
       <h4>💡 Key Contributions</h4>
       <div class="project-modal-tags">
         <span class="project-modal-tag">Product Direction (0 to 1)</span>
@@ -1691,17 +1696,17 @@
       <a href="https://zuno.fayzan.xyz/" target="_blank" rel="noopener noreferrer"
         class="project-modal-btn project-modal-btn-primary">
         <ion-icon name="open-outline"></ion-icon>
-        <span>Visit Zuno</span>
+        <span data-i18n="project.zuno.cta1">Visit Zuno</span>
       </a>
 
       <a href="https://github.com/noFAYZ/zuno" target="_blank" rel="noopener noreferrer"
         class="project-modal-btn project-modal-btn-ghost">
         <ion-icon name="logo-github"></ion-icon>
-        <span>View on GitHub</span>
+        <span data-i18n="project.zuno.cta2">View on GitHub</span>
       </a>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.zuno.section1">
       <h4>📌 Overview</h4>
       <p>
         <a href="https://zuno.fayzan.xyz/" target="_blank" rel="noopener noreferrer">Zuno</a> is a free and open
@@ -1712,7 +1717,7 @@
       </p>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.zuno.section2">
       <h4>🧭 Product Direction</h4>
       <ul>
         <li><strong>Prioritization:</strong> Helped decide what deserved to ship next by weighing user-reported
@@ -1725,7 +1730,7 @@
       </ul>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.zuno.section3">
       <h4>🔬 QA Focus Areas</h4>
       <ul>
         <li><strong>Last.fm integration:</strong> Owned the QA of scrobbling end to end — authorization flow, when a
@@ -1739,7 +1744,7 @@
       </ul>
     </div>
 
-    <div class="project-modal-section">
+    <div class="project-modal-section" data-i18n="project.zuno.section4">
       <h4>💡 Key Contributions</h4>
       <div class="project-modal-tags">
         <span class="project-modal-tag">Product Direction</span>
@@ -1755,6 +1760,715 @@
 
 
 
+
+
+  <!-- i18n translations (pt) -->
+
+  <template data-i18n-pt-for="sidebar.email">E-mail</template>
+  <template data-i18n-pt-for="sidebar.phone">Telefone</template>
+  <template data-i18n-pt-for="sidebar.location">Localização</template>
+  <template data-i18n-pt-for="sidebar.city">São Paulo, Brasil</template>
+
+  <template data-i18n-pt-for="nav.about">Sobre</template>
+  <template data-i18n-pt-for="nav.resume">Currículo</template>
+  <template data-i18n-pt-for="nav.contact">Contato</template>
+
+  <template data-i18n-pt-for="about.heading">Sobre mim</template>
+  <template data-i18n-pt-for="about.p1">
+    Sou Product Manager há mais de 8 anos, mas o que realmente me motiva é a curiosidade técnica e a entrega de
+    valor real. Naveguei por tudo, de B2B a B2C (Fintech, Edtech, IA Conversacional), e construí mais de 7
+    produtos completamente do zero (0 a 1).
+  </template>
+  <template data-i18n-pt-for="about.p2">
+    Não fico apenas no campo da teoria: uso IA no meu fluxo de trabalho diário para validar hipóteses na
+    velocidade da luz — testando ideias com Claude Code, AI Studio, Replit ou Emergent. Tenho uma base técnica
+    sólida e utilizo ferramentas de backend (com uma afinidade especial pelo Firebase) para prototipar e
+    estruturar sistemas que vão do conceito ao lançamento de forma fluida.
+  </template>
+  <template data-i18n-pt-for="about.p3">
+    Minha trajetória vai de liderar produtos responsáveis por 80% da receita de uma unidade de negócio na maior
+    empresa de educação do mundo, até construir superapps que impactaram milhões de usuários por meio de
+    estratégias de PLG. Falo a mesma língua da Engenharia — direta e detalhada — e minhas decisões de produto
+    são embasadas em análises profundas de dados usando Amplitude, Mixpanel, Metabase, Databricks e outras
+    ferramentas.
+  </template>
+
+  <template data-i18n-pt-for="clients.title">Empresas com as quais já trabalhei</template>
+
+  <template data-i18n-pt-for="service.title">O que eu faço</template>
+  <template data-i18n-pt-for="service.pm.title">Gestão de Produto</template>
+  <template data-i18n-pt-for="service.pm.desc">
+    Liderando produtos de ponta a ponta como Specialist / Group PM — da estratégia e roadmap até a entrega.
+  </template>
+  <template data-i18n-pt-for="service.builder.title">PM Builder</template>
+  <template data-i18n-pt-for="service.builder.desc">
+    Construindo aplicações com as próprias mãos e validando hipóteses com experimentos reais e rápidos.
+  </template>
+  <template data-i18n-pt-for="service.learning.title">Aprendizado Contínuo</template>
+  <template data-i18n-pt-for="service.learning.desc">
+    Infinitamente curioso — sempre lendo, fazendo cursos e explorando novas ideias e tecnologias.
+  </template>
+  <template data-i18n-pt-for="service.music.title">Música</template>
+  <template data-i18n-pt-for="service.music.desc">
+    Fora do expediente, adoro ouvir música — ela alimenta meu foco, minha criatividade e meu humor no dia a dia.
+  </template>
+
+  <template data-i18n-pt-for="portfolio.title">Portfólio</template>
+
+  <template data-i18n-pt-for="resume.heading">Currículo</template>
+  <template data-i18n-pt-for="resume.education.heading">Formação</template>
+  <template data-i18n-pt-for="resume.experience.heading">Experiência</template>
+
+  <template data-i18n-pt-for="resume.edu1.title">Fatec São Paulo — Redes de Computadores</template>
+  <template data-i18n-pt-for="resume.edu1.desc">
+    Tecnólogo em Redes de Computadores.
+  </template>
+  <template data-i18n-pt-for="resume.edu2.title">Fatec Jundiaí — Gestão da Tecnologia da Informação</template>
+  <template data-i18n-pt-for="resume.edu2.desc">
+    Tecnólogo em Gestão da Tecnologia da Informação.
+  </template>
+  <template data-i18n-pt-for="resume.edu3.title">ETEC — Escola Técnica Estadual de São Paulo</template>
+  <template data-i18n-pt-for="resume.edu3.desc">
+    Técnico em Informática, com foco em Tecnologia de Software.
+  </template>
+
+  <template data-i18n-pt-for="resume.exp1.desc">
+    Depois de desempenhar um papel fundamental na construção da cultura de produto e dados da empresa, fui
+    designado para assumir a posição de Group Product Manager, liderando um time multifuncional de 12 pessoas
+    com reports de Produto e Engenharia.
+  </template>
+  <template data-i18n-pt-for="resume.exp1.section1">
+    <h4>Desafios Estratégicos</h4>
+    <ul>
+      <li><strong>Transformação Digital:</strong> Reposicionar o app Cartão de TODOS para se tornar o hub
+        central da experiência de saúde contínua do usuário (agendamento, histórico, exames e engajamento),
+        indo além de sua métrica isolada de canal de aquisição e refocando no core business.</li>
+      <li><strong>Novas Verticais Financeiras:</strong> Diversificar as linhas de negócio da MaisTODOS criando
+        soluções de crédito e meios de pagamento dentro e fora do grupo.</li>
+      <li><strong>Escalabilidade:</strong> Liderei a implementação da solução de "MiniApps" para expandir a
+        proposta de valor do super app Cartão de TODOS.</li>
+    </ul>
+  </template>
+  <template data-i18n-pt-for="resume.exp1.section2">
+    <h4>Entregas de Produto &amp; Infraestrutura Financeira</h4>
+    <ul>
+      <li><strong>Meios de Pagamento:</strong> Desenvolvi e lancei um circuito de pagamento closed-loop na
+        Carteira do app (via CardSE).</li>
+      <li><strong>Crédito Estruturado:</strong> Lancei uma plataforma de financiamento de veículos apoiada em
+        infraestrutura própria de securitização e FIDC.</li>
+      <li><strong>Experiência do Cliente (Meu Crédito):</strong> Construí a plataforma de crédito self-service
+        do ecossistema, reduzindo chamados de suporte ao viabilizar consulta de status de contrato, extratos de
+        parcelas/faturas, histórico de quitação e liquidação direta.</li>
+    </ul>
+  </template>
+
+  <template data-i18n-pt-for="resume.exp2.desc">
+    Product Manager responsável pelo desenvolvimento do super-app Cartão de TODOS (mais de 7 milhões de
+    usuários), liderando a frente de aquisição e engajamento de ponta a ponta:
+  </template>
+  <template data-i18n-pt-for="resume.exp2.section1">
+    <ul>
+      <li><strong>PLG:</strong> Defini e executei a estratégia de PLG para aquisição de usuários, resultando em
+        um aumento de +10x na taxa de conversão de freemium para premium, além de instrumentar um MMP para
+        atribuição e otimização de campanhas pagas.</li>
+      <li><strong>Antifraude:</strong> Estruturei a camada antifraude, integrando ferramentas de KYC e scoring
+        de risco para reduzir a exposição a fraude ao longo da jornada de pagamentos [funil com mais de 200 mil
+        usuários/mês].</li>
+      <li><strong>Carteira:</strong> Concebi a carteira de pagamentos (private label + custódia de saldo),
+        viabilizando um novo modelo de receita e fidelização dentro do ecossistema financeiro do produto [mais
+        de 5 milhões de cartões pré-pagos emitidos].</li>
+    </ul>
+  </template>
+
+  <template data-i18n-pt-for="resume.exp3.desc">
+    Product Manager da BU de Benefícios da Flash, responsável pelo ciclo de vida completo do produto SaaS de
+    benefícios flexíveis, do cadastro ao checkout.
+  </template>
+  <template data-i18n-pt-for="resume.exp3.section1">
+    <ul>
+      <li><strong>Ecossistema FlashOS:</strong> Liderei a integração do produto de benefícios flexíveis ao
+        ecossistema FlashOS, unificando a plataforma de RH e viabilizando uma experiência consolidada para o
+        cliente ao entregar interoperabilidade entre módulos e reduzir atrito operacional.</li>
+      <li><strong>Cultura Orientada a Dados:</strong> Construí uma cultura orientada a dados no time,
+        implementando dashboards e instrumentando dados no Metabase, Amplitude, HubSpot e Databricks,
+        monitorando e agindo ativamente sobre indicadores-chave como TPV, Taxa de Contato, Conversão de
+        Checkout e Taxa de Churn para embasar decisões de produto e priorização de roadmap.</li>
+      <li><strong>Performance &amp; Eficiência:</strong> Melhorei a performance de processamento de pedidos de
+        benefícios em 130%, viabilizando grandes clientes enterprise, com impacto direto na experiência do time
+        de RH no checkout.</li>
+      <li><strong>Crescimento &amp; Retenção:</strong> Aumentei o TPV em 21% e reduzi a Taxa de Contato em 46%,
+        refletindo ganhos simultâneos de adoção e qualidade percebida do produto.</li>
+      <li><strong>Customer Success &amp; Expansão:</strong> Gerenciei relacionamentos com clientes estratégicos,
+        impulsionando retenção, identificando oportunidades de expansão e fechando o loop entre feedback de
+        mercado e o roadmap do produto.</li>
+    </ul>
+  </template>
+
+  <template data-i18n-pt-for="resume.exp4.desc">
+    Gerenciei o desenvolvimento e suporte de smart contacts (WhatsApp, Instagram, Google Business Messages,
+    Chat, Teams) para clientes como Contabilizei, Creditas, Tempo Assist e Toro, liderando um time
+    multifuncional de 8 pessoas. Entreguei 18 smart contacts cobrindo 60% do volume de chamados de suporte das
+    seguradoras, reduzi os custos de mensagens proativas em 30% e estruturei a operação de suporte via canais
+    digitais da Creditas.
+  </template>
+  <template data-i18n-pt-for="resume.exp5.desc">
+    Liderei squads ágeis ao longo de todo o ciclo de vida do produto, do conceito ao go-to-market, acompanhando
+    DAU, MAU, conversão, churn e retenção, conduzi a vertical de sustentação da plataforma junto com a
+    engenharia, atuei em parceria com performance marketing na aquisição (implementação de MMP) e apoiei a
+    divisão de escopo da aquisição dos jogos da Afterverse.
+  </template>
+  <template data-i18n-pt-for="resume.exp6.desc">
+    Liderei a vertical de produtos de ensino superior — gestão de ciclo de vida, ativação de backlog, gestão de
+    fornecedores externos de tecnologia e alinhamento multifuncional com vendas — conduzindo o produto
+    Biblioteca Virtual, responsável por 80% da receita da BU de ensino superior.
+  </template>
+  <template data-i18n-pt-for="resume.exp7.desc">
+    Conduzi análises quantitativas e qualitativas do negócio de ensino superior, liderei a refatoração técnica
+    do portfólio de produtos digitais, acompanhei a performance de produto e do time, e reportei diretamente à
+    liderança da empresa; ajudei a reestruturar a BU de ensino superior e a regionalizar 3 produtos globais da
+    Pearson.
+  </template>
+  <template data-i18n-pt-for="resume.exp8.desc">
+    Product Owner de novos produtos digitais da marca Wizard, conectando negócio, tecnologia e a rede de
+    franquias — buscando parceiros de outsourcing, conduzindo squads multidisciplinares, levantando requisitos
+    em campo junto a escolas e franqueados, e reportando diretamente à VP de Franquias.
+  </template>
+  <template data-i18n-pt-for="resume.exp9.desc">
+    Dei suporte e administrei plataformas digitais das divisões de inglês e ensino superior — relatórios de uso
+    e estabilidade, planejamento de projetos, QA de novos produtos, interface com fornecedores e coordenação de
+    uma plataforma online de ensino de inglês para parcerias municipais.
+  </template>
+  <template data-i18n-pt-for="resume.exp10.desc">
+    Responsável por apoiar a implementação de plataformas e integrações utilizando o .NET Framework e o padrão
+    MVC.
+  </template>
+  <template data-i18n-pt-for="resume.exp11.desc">
+    Programa de estágio.
+  </template>
+
+  <template data-i18n-pt-for="builder.heading">Builder</template>
+  <template data-i18n-pt-for="builder.tools.title">Ferramentas de builder que eu domino</template>
+  <template data-i18n-pt-for="builder.post.amanda.title">Amanda Hallwas - Fit Pro</template>
+  <template data-i18n-pt-for="builder.post.amanda.desc">
+    Um ecossistema vibecoded para uma personal trainer: uma landing page otimizada para SEO para divulgar seu
+    trabalho e um app multitenant para gerenciar alunas — agendamento, pagamentos e acompanhamento de progresso.
+    Hoje em operação com mais de 70 usuárias ativas.
+  </template>
+  <template data-i18n-pt-for="builder.post.zuno.title">Zuno</template>
+  <template data-i18n-pt-for="builder.post.zuno.desc">
+    Um cliente desktop nativo e gratuito para o YouTube Music no Windows, macOS e Linux. Fui responsável pela
+    direção de produto e QA — com destaque para a integração de scrobbling com o Last.fm e a autenticação
+    persistente do YouTube no macOS.
+  </template>
+
+  <template data-i18n-pt-for="contact.heading">Contato</template>
+  <template data-i18n-pt-for="contact.form.title">Entre em Contato</template>
+  <template data-i18n-pt-for="contact.cta">
+    Tem um projeto em mente ou só quer dizer oi? Minha caixa de entrada está aberta.
+  </template>
+  <template data-i18n-pt-for="contact.btn.email">Me Envie um E-mail</template>
+  <template data-i18n-pt-for="contact.btn.whatsapp">Fale Comigo pelo WhatsApp</template>
+
+  <template data-i18n-pt-for="project.bv.cta">Visite a Biblioteca Virtual</template>
+  <template data-i18n-pt-for="project.bv.section1">
+    <h4>📌 Visão Geral &amp; Desafio</h4>
+    <p>
+      A Biblioteca Virtual foi criada para transformar o modelo tradicional de consumo e distribuição de
+      acervos digitais. Como Product Manager, liderei todo o ciclo de vida do produto do zero (0 a 1) — da fase
+      de descoberta e pesquisa de mercado até a concepção, desenvolvimento e lançamento de uma plataforma
+      robusta e escalável.
+    </p>
+  </template>
+  <template data-i18n-pt-for="project.bv.section2">
+    <h4>🔍 Descoberta &amp; Pesquisa de Mercado</h4>
+    <p>Antes de definir qualquer funcionalidade, conduzi uma pesquisa de mercado aprofundada e uma análise do
+      comportamento dos usuários:</p>
+    <ul>
+      <li><strong>Benchmarking &amp; Lacunas de Mercado:</strong> Mapeei as principais soluções do setor para
+        identificar pontos de dor no modelo de negócio, barreiras de usabilidade e oportunidades de
+        diferenciação.</li>
+      <li><strong>Pesquisa com Usuários (Qualitativa &amp; Quantitativa):</strong> Conduzi entrevistas e
+        pesquisas para entender a jornada de estudantes, leitores e instituições, revelando gargalos na
+        descoberta de conteúdo, legibilidade e hábitos de consumo.</li>
+      <li><strong>Personas &amp; Proposta de Valor:</strong> Traduzi os insights da pesquisa em diretrizes
+        claras de produto, garantindo que o desenvolvimento endereçasse necessidades reais dos usuários.</li>
+    </ul>
+  </template>
+  <template data-i18n-pt-for="project.bv.section3">
+    <h4>🚀 Do Conceito ao Lançamento (Visão de Produto)</h4>
+    <p>Com base nos insights da pesquisa, defini a visão de produto, a arquitetura da informação e o roadmap
+      estratégico:</p>
+    <ul>
+      <li><strong>Roadmap &amp; Priorização:</strong> Estruturei o backlog com foco no MVP, garantindo entregas
+        de alto valor voltadas para a experiência de leitura e a busca no acervo.</li>
+      <li><strong>Engenharia &amp; UX:</strong> Colaborei de perto com os times de UI/UX e engenharia para
+        construir uma experiência fluida, acessível e responsiva.</li>
+    </ul>
+  </template>
+  <template data-i18n-pt-for="project.bv.section4">
+    <h4>📈 Impacto no Negócio &amp; no Mercado</h4>
+    <p>O lançamento do produto gerou um impacto significativo em múltiplas frentes:</p>
+    <ul>
+      <li>
+        <strong>Impacto no Negócio:</strong>
+        <ul>
+          <li>Estruturou um novo fluxo de receita e modelo de distribuição para a empresa.</li>
+          <li>Aumentou a eficiência operacional na gestão do acervo digital e no onboarding de
+            conteúdo/parceiros.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Impacto no Mercado &amp; nos Usuários:</strong>
+        <ul>
+          <li>Democratizou o acesso à leitura por meio de uma plataforma intuitiva e centrada no usuário.</li>
+          <li>Elevou o padrão de usabilidade dos serviços de biblioteca digital, impulsionando fortes métricas
+            de engajamento e retenção de leitores.</li>
+        </ul>
+      </li>
+    </ul>
+  </template>
+  <template data-i18n-pt-for="project.bv.section5">
+    <h4>💡 Principais Contribuições como PM</h4>
+    <div class="project-modal-tags">
+      <span class="project-modal-tag">Pesquisa de Mercado</span>
+      <span class="project-modal-tag">Estratégia de Produto (0 a 1)</span>
+      <span class="project-modal-tag">Priorização de Roadmap</span>
+      <span class="project-modal-tag">Alinhamento com Stakeholders</span>
+      <span class="project-modal-tag">Go-to-Market &amp; Métricas de Sucesso</span>
+    </div>
+  </template>
+  <template data-i18n-pt-for="project.bv.achievements">
+
+    <div class="achievement-item">
+      <span class="achievement-number">+80</span>
+      <span class="achievement-label">Editoras parceiras</span>
+    </div>
+
+    <div class="achievement-item">
+      <span class="achievement-number">+300</span>
+      <span class="achievement-label">Instituições usando a BV</span>
+    </div>
+
+    <div class="achievement-item">
+      <span class="achievement-number">+5M</span>
+      <span class="achievement-label">Estudantes alcançados</span>
+    </div>
+
+    <div class="achievement-item achievement-item-wide">
+      <span class="achievement-number">🏆 Produto Destaque</span>
+      <span class="achievement-label">No portfólio de ensino superior da América Latina</span>
+    </div>
+
+  </template>
+
+  <template data-i18n-pt-for="project.flash.cta">Visite a Flash</template>
+  <template data-i18n-pt-for="project.flash.section1">
+    <h4>📌 Visão Geral &amp; Desafio</h4>
+    <p>
+      A Flash é uma das maiores emissoras de cartões de benefícios e alimentação do Brasil, atendendo
+      <strong>mais de 1 milhão de usuários</strong> e <strong>R$1 bi em TPV</strong>. Como Product Manager da
+      plataforma de RH, fui responsável pela jornada de checkout de ponta a ponta — da compra de créditos feita
+      pelo RH, passando pela liquidação, até a custódia de saldo para o colaborador final.
+    </p>
+  </template>
+  <template data-i18n-pt-for="project.flash.section2">
+    <h4>🧩 Migração para a Plataforma Flash OS</h4>
+    <p>
+      A Flash cresceu via fusões e aquisições, expandindo de benefícios de alimentação para despesas
+      corporativas, gestão de viagens e serviços de RH. Cada novo módulo existia como um componente isolado até
+      que o Flash OS os reuniu em uma única plataforma completa. Benefícios era o core business da Flash e sua
+      maior base de clientes, o que tornava esse o módulo mais sensível a migrar.
+    </p>
+    <ul>
+      <li><strong>Redesign:</strong> Liderei o redesign da plataforma de benefícios e sua integração ao Flash
+        OS.</li>
+      <li><strong>Rollout seguro:</strong> Conduzi testes A/B e um rollout gradual para migrar a base de
+        usuários existente para a nova plataforma sem interromper o checkout.</li>
+      <li><strong>Cross-sell:</strong> Usei a experiência unificada para impulsionar a adoção dos demais
+        produtos do Flash OS.</li>
+    </ul>
+    <figure class="project-modal-figure">
+      <img src="./assets/images/flash-os.png" alt="Flash OS unified HR platform" loading="lazy">
+      <figcaption>Benefícios integrado à plataforma unificada Flash OS.</figcaption>
+    </figure>
+  </template>
+  <template data-i18n-pt-for="project.flash.section3">
+    <h4>💳 Novo Emissor, Nova Bandeira &amp; 1M de Cartões Reemitidos</h4>
+    <p>
+      Para atender a novas exigências regulatórias, a Flash trocou seu emissor e sua bandeira de cartão para
+      implementar o trilho de pagamento "voucher". Supervisionei a transição para toda a base de benefícios —
+      tanto os administradores de RH quanto os colaboradores — já que os cartões antigos deixariam de funcionar
+      assim que a migração para a <strong>VISA</strong> fosse concluída.
+    </p>
+    <ul>
+      <li><strong>Orquestração B2B:</strong> Organizei a transição para mais de <strong>50 mil empresas</strong>
+        e <strong>600 mil colaboradores</strong>.</li>
+      <li><strong>Reemissão em escala:</strong> <strong>1 milhão de cartões</strong> emitidos na nova
+        bandeira.</li>
+      <li><strong>Migração de saldo:</strong> Coordenei a migração dos saldos dos colaboradores entre emissores
+        sem perda de fundos ou de acesso.</li>
+    </ul>
+    <figure class="project-modal-figure">
+      <img src="./assets/images/flash_card.jpg" alt="Flash VISA benefits card" loading="lazy">
+      <figcaption>O cartão Flash reemitido na nova bandeira VISA.</figcaption>
+    </figure>
+  </template>
+  <template data-i18n-pt-for="project.flash.section4">
+    <h4>📈 Impacto no Negócio</h4>
+    <ul>
+      <li><strong>Performance &amp; Eficiência:</strong> Melhoria de 130% na performance de processamento de
+        pedidos de benefícios para grandes empresas, impactando diretamente a experiência do RH no
+        checkout.</li>
+      <li><strong>Crescimento &amp; Retenção:</strong> Crescimento de 21% no TPV e redução de 46% na taxa de
+        contato — ganhos simultâneos de adoção e qualidade percebida do produto.</li>
+      <li><strong>Colaboradores ativos:</strong> Durante minha passagem pela Flash, um esforço conjunto fez a
+        base de colaboradores ativos crescer de 600 mil para 1 milhão.</li>
+    </ul>
+  </template>
+  <template data-i18n-pt-for="project.flash.section5">
+    <h4>💡 Principais Contribuições como PM</h4>
+    <div class="project-modal-tags">
+      <span class="project-modal-tag">Pagamentos &amp; Checkout</span>
+      <span class="project-modal-tag">Custódia &amp; Liquidação de Saldo</span>
+      <span class="project-modal-tag">Migração de Plataforma</span>
+      <span class="project-modal-tag">Emissão de Cartões &amp; Troca de Bandeira</span>
+      <span class="project-modal-tag">Conformidade Regulatória</span>
+      <span class="project-modal-tag">Testes A/B &amp; Rollout Gradual</span>
+    </div>
+  </template>
+  <template data-i18n-pt-for="project.flash.achievements">
+
+    <div class="achievement-item">
+      <span class="achievement-number">+130%</span>
+      <span class="achievement-label">Performance de processamento de pedidos</span>
+    </div>
+
+    <div class="achievement-item">
+      <span class="achievement-number">+21%</span>
+      <span class="achievement-label">Crescimento de TPV</span>
+    </div>
+
+    <div class="achievement-item">
+      <span class="achievement-number">-46%</span>
+      <span class="achievement-label">Taxa de contato</span>
+    </div>
+
+    <div class="achievement-item">
+      <span class="achievement-number">1M</span>
+      <span class="achievement-label">Cartões reemitidos na VISA</span>
+    </div>
+
+    <div class="achievement-item achievement-item-wide">
+      <span class="achievement-number">600 mil → 1M</span>
+      <span class="achievement-label">Colaboradores ativos durante minha passagem</span>
+    </div>
+
+  </template>
+
+  <template data-i18n-pt-for="project.wizme.cta">Visite o Wiz Me da Wizard</template>
+  <template data-i18n-pt-for="project.wizme.section1">
+    <h4>📌 Visão Geral &amp; Desafio</h4>
+    <p>
+      Na Wizard, fui responsável pela concepção e desenvolvimento dos produtos digitais da marca, atuando na
+      interseção estratégica entre visão de negócio, times de tecnologia e a rede de franquias. O desafio
+      central era estrutural: a sala de aula tradicional — carteiras em fileiras, um único ritmo para todos —
+      criava gargalos de retenção e escalabilidade, com as turmas de nível avançado esvaziando progressivamente
+      até deixarem de ser viáveis para o franqueado.
+    </p>
+  </template>
+  <template data-i18n-pt-for="project.wizme.section2">
+    <h4>🔍 A Aposta: Wizard Interactive</h4>
+    <p>
+      Liderei a estruturação do <strong>Wizard Interactive</strong>, um modelo pedagógico baseado na cultura
+      maker que rompeu o molde tradicional de sala de aula ao colocar protagonismo e autonomia nas mãos dos
+      alunos. O modelo permitia que estudantes de diferentes níveis de proficiência compartilhassem o mesmo
+      espaço físico enquanto gerenciavam seu próprio ritmo por meio de uma camada digital — transformando uma
+      operação rígida e presa a níveis fixos em algo flexível.
+    </p>
+  </template>
+  <template data-i18n-pt-for="project.wizme.section3">
+    <h4>🚀 Wiz.me — O Companheiro do Aluno</h4>
+    <p>
+      O <strong>Wiz.me</strong> era o coração dessa camada digital: um assistente pessoal que acompanhava o
+      aluno ao longo de toda a jornada de aprendizagem.
+    </p>
+    <ul>
+      <li><strong>Gestão de Estudos:</strong> Ajudava os alunos a organizar seu próprio ritmo, acompanhar o
+        progresso e saber o que estudar a seguir em uma turma multinível.</li>
+      <li><strong>Orientação &amp; Dicas:</strong> Entregava dicas de estudo contextuais e atividades
+        complementares de acordo com o momento real de cada aluno.</li>
+      <li><strong>Conversacional por Design:</strong> Construído sobre árvores de decisão com <strong>IBM
+        Watson</strong>, antecipando a tendência de IA conversacional bem antes de ela se tornar padrão no
+        setor.</li>
+    </ul>
+  </template>
+  <template data-i18n-pt-for="project.wizme.section4">
+    <h4>🧩 Entregas de Suporte</h4>
+    <ul>
+      <li><strong>WizTab:</strong> Uma aplicação de tablet sob medida que funcionava tanto como CMS quanto como
+        leitor interativo dos materiais didáticos.</li>
+      <li><strong>Wizard ERP:</strong> Integração da solução Sponte, dando à rede de franquias um sistema de
+        gestão completo, adaptado ao fluxo de ensino interativo.</li>
+    </ul>
+  </template>
+  <template data-i18n-pt-for="project.wizme.section5">
+    <h4>📈 Impacto no Negócio</h4>
+    <p>
+      Ao viabilizar o agrupamento multinível de alunos dentro de uma única sala de aula, resolvemos na raiz o
+      gargalo de retenção e escalabilidade — otimizando o uso do espaço físico e melhorando diretamente a
+      lucratividade do franqueado, além de entregar aos alunos uma experiência de aprendizagem construída em
+      torno do próprio ritmo.
+    </p>
+  </template>
+  <template data-i18n-pt-for="project.wizme.section6">
+    <h4>💡 Principais Contribuições como PM</h4>
+    <div class="project-modal-tags">
+      <span class="project-modal-tag">Concepção de Produto (0 a 1)</span>
+      <span class="project-modal-tag">IA Conversacional</span>
+      <span class="project-modal-tag">Estratégia de Produto EdTech</span>
+      <span class="project-modal-tag">Rollout na Rede de Franquias</span>
+      <span class="project-modal-tag">Liderança Multifuncional</span>
+    </div>
+  </template>
+
+  <template data-i18n-pt-for="project.amandahallwas.cta">Visite Amanda Hallwas</template>
+  <template data-i18n-pt-for="project.amandahallwas.section1">
+    <h4>📌 Visão Geral &amp; Desafio</h4>
+    <p>
+      Minha irmã é personal trainer, e coordenar suas alunas — horários, pagamentos, planos de treino,
+      acompanhamento de progresso — acontecia tudo manualmente, entre planilhas e WhatsApp. Construí para ela
+      um pequeno ecossistema de produto do zero: uma landing page pública para atrair e converter novos leads,
+      e um app privado para ela de fato rodar o negócio no dia a dia. Fui responsável por <strong>direção de
+      produto, desenvolvimento do app e go-to-market</strong> de ponta a ponta.
+    </p>
+  </template>
+  <template data-i18n-pt-for="project.amandahallwas.section2">
+    <h4>🌐 A Landing Page</h4>
+    <p>
+      Um site vitrine construído para ser encontrado e para converter — totalmente otimizado para indexação no
+      Google, com analytics instrumentado desde o primeiro dia para que cada visita, clique e pedido de
+      agendamento seja mensurável.
+    </p>
+    <ul>
+      <li><strong>Construção SEO-first:</strong> estrutura semântica, metadados e performance ajustados para
+        descoberta orgânica, não apenas alcance pago.</li>
+      <li><strong>Implementação de analytics:</strong> rastreamento de eventos configurado para entender o que
+        de fato gera uma sessão agendada, não apenas tráfego.</li>
+    </ul>
+  </template>
+  <template data-i18n-pt-for="project.amandahallwas.section3">
+    <h4>📱 O App da Personal Trainer</h4>
+    <p>
+      O núcleo do ecossistema: um app multitenant para que a mesma plataforma possa escalar para outras
+      personal trainers no futuro, construído inteiramente sobre o stack do Google.
+    </p>
+    <ul>
+      <li><strong>Pagamentos:</strong> instruções de cobrança e status do plano por aluna, substituindo a
+        cobrança manual.</li>
+      <li><strong>Agendamento de aulas:</strong> fluxo de reserva e confirmação para as sessões semanais.</li>
+      <li><strong>Acompanhamento de progresso:</strong> avaliações físicas e histórico de treinos registrados
+        por aluna, para que a personal trainer acompanhe a evolução ao longo do tempo.</li>
+      <li><strong>Arquitetura multitenant:</strong> Firebase Auth e Firebase Storage sustentam dados isolados
+        de personal trainer/aluna, mantendo a plataforma pronta para integrar mais instrutoras sem precisar de
+        uma reconstrução.</li>
+    </ul>
+    <figure class="project-modal-figure">
+      <img src="./assets/images/amanda_hallwas_showcase.png" alt="Amanda Hallwas web dashboard and trainee mobile app" loading="lazy">
+      <figcaption>Dashboard web da personal trainer ao lado do app mobile das alunas — agenda, financeiro e
+        progresso em um só lugar.</figcaption>
+    </figure>
+  </template>
+  <template data-i18n-pt-for="project.amandahallwas.section4">
+    <h4>📈 Impacto</h4>
+    <ul>
+      <li><strong>0 a 1:</strong> lancei um ecossistema de produto totalmente vibecoded — landing page mais app
+        multitenant — partindo de um problema real e pessoal até uma ferramenta de negócio em produção.</li>
+      <li><strong>Adoção:</strong> mais de 70 usuárias ativas gerenciando sua relação de treino inteiramente
+        pelo app.</li>
+      <li><strong>Mudança operacional:</strong> tirou a personal trainer das planilhas e das mensagens manuais,
+        levando-a para um único sistema de pagamentos, agendamento e progresso.</li>
+    </ul>
+  </template>
+  <template data-i18n-pt-for="project.amandahallwas.section5">
+    <h4>💡 Principais Contribuições</h4>
+    <div class="project-modal-tags">
+      <span class="project-modal-tag">Direção de Produto (0 a 1)</span>
+      <span class="project-modal-tag">Desenvolvimento de App</span>
+      <span class="project-modal-tag">Go-to-Market</span>
+      <span class="project-modal-tag">SEO &amp; Analytics</span>
+      <span class="project-modal-tag">Firebase Auth &amp; Storage</span>
+      <span class="project-modal-tag">Arquitetura Multitenant</span>
+    </div>
+  </template>
+
+  <template data-i18n-pt-for="project.zuno.cta1">Visite o Zuno</template>
+  <template data-i18n-pt-for="project.zuno.cta2">Ver no GitHub</template>
+  <template data-i18n-pt-for="project.zuno.section1">
+    <h4>📌 Visão Geral</h4>
+    <p>
+      <a href="https://zuno.fayzan.xyz/" target="_blank" rel="noopener noreferrer">Zuno</a> é um cliente
+      desktop gratuito e open source para o YouTube Music no Windows, macOS e Linux — abas que continuam
+      tocando de forma independente, downloads offline, letras sincronizadas e integrações com Last.fm e
+      Discord. Entrei no projeto como contribuidor responsável por <strong>direção de produto e QA</strong>,
+      ajudando a transformar uma ferramenta promissora para power users em algo previsível para todo mundo.
+    </p>
+  </template>
+  <template data-i18n-pt-for="project.zuno.section2">
+    <h4>🧭 Direção de Produto</h4>
+    <ul>
+      <li><strong>Priorização:</strong> Ajudei a decidir o que merecia ser lançado em seguida, pesando o atrito
+        reportado pelos usuários contra o esforço, mantendo o roadmap focado na experiência de audição em vez
+        de espalhar funcionalidades.</li>
+      <li><strong>Escopo &amp; comportamento esperado:</strong> Traduzi pedidos vagos em comportamentos
+        concretos e testáveis — o que deveria acontecer em cada plataforma e o que "pronto" realmente
+        significa.</li>
+      <li><strong>Ciclo de feedback:</strong> Transformei relatos de bugs em casos reproduzíveis para que as
+        correções endereçassem problemas reais dos usuários, não suposições.</li>
+    </ul>
+  </template>
+  <template data-i18n-pt-for="project.zuno.section3">
+    <h4>🔬 Áreas de Foco de QA</h4>
+    <ul>
+      <li><strong>Integração com Last.fm:</strong> Fui responsável pelo QA do scrobbling de ponta a ponta —
+        fluxo de autorização, quando uma faixa conta como tocada, troca de abas e reprodução em segundo plano,
+        e recuperação quando a rede ou a sessão do Last.fm cai.</li>
+      <li><strong>Autenticação persistente do YouTube no macOS:</strong> Conduzi a investigação e validação da
+        persistência de sessão, para que os usuários parassem de ser deslogados entre as aberturas do app — o
+        incômodo mais disruptivo para os usuários de macOS.</li>
+      <li><strong>Testes de regressão multiplataforma:</strong> Validei release candidates no Windows, macOS e
+        Linux antes de cada build ir ao ar.</li>
+    </ul>
+  </template>
+  <template data-i18n-pt-for="project.zuno.section4">
+    <h4>💡 Principais Contribuições</h4>
+    <div class="project-modal-tags">
+      <span class="project-modal-tag">Direção de Produto</span>
+      <span class="project-modal-tag">QA &amp; Validação de Releases</span>
+      <span class="project-modal-tag">Colaboração Open Source</span>
+      <span class="project-modal-tag">Integração com Last.fm</span>
+      <span class="project-modal-tag">Persistência de Auth no macOS</span>
+    </div>
+  </template>
+
+  <template data-i18n-pt-for="project.cartao.section1">
+    <h4>📌 Visão Geral &amp; Escala do Ecossistema</h4>
+    <p>
+      O <strong>Cartão de TODOS</strong> é uma healthtech líder e operadora do maior ecossistema de saúde
+      secundária do Brasil, ancorado por uma rede de mais de <strong>530 clínicas AmorSaúde</strong> em todo o
+      país. Presente em todos os municípios brasileiros com mais de 100 mil habitantes, o ecossistema realiza
+      mais de <strong>1,8 milhão de consultas médicas por mês</strong> e atende mais de <strong>7 milhões de
+      assinantes ativos</strong>.
+    </p>
+    <p>
+      Historicamente estruturado como um cartão de saúde e benefícios acessível, o Cartão de TODOS dependia
+      principalmente de sua presença nacional de clínicas e de sua rede de vendas física. Até 2024, <strong>mais
+      de 90% do CAC da empresa</strong> era gerado exclusivamente por aquisição porta a porta.
+    </p>
+  </template>
+  <template data-i18n-pt-for="project.cartao.section2">
+    <h4>🚀 O Desafio: Estratégia de Product-Led Growth (PLG)</h4>
+    <p>
+      Meu primeiro desafio estratégico foi arquitetar e executar uma estratégia de <strong>Product-Led Growth
+      (PLG)</strong> para atrair e converter um público mais jovem e digital-first para o ecossistema.
+    </p>
+    <p>
+      Na época, o app do Cartão de TODOS era amplamente subutilizado, funcionando predominantemente como uma
+      ferramenta básica de agendamento de consultas médicas. Nos propusemos a reposicionar fundamentalmente o
+      produto, de uma ferramenta ocasional de agendamento para um <strong>companheiro diário indispensável
+      para as famílias brasileiras</strong> — desenhado para resolver as necessidades financeiras e de estilo
+      de vida recorrentes das classes C e D.
+    </p>
+  </template>
+  <template data-i18n-pt-for="project.cartao.section3">
+    <h4>💳 Carteira Digital Closed-Loop, Cashback &amp; Arquitetura de MiniApps</h4>
+    <p>
+      Para transformar o Cartão de TODOS em um hábito financeiro do dia a dia e gerar valor recorrente,
+      construímos uma camada financeira digital de ponta a ponta e uma plataforma modular:
+    </p>
+    <ul>
+      <li><strong>Carteira de Pagamentos Closed-Loop:</strong> Concebi e lancei uma carteira digital de
+        pagamentos proprietária, construída sobre um trilho closed-loop, posicionando o Cartão de TODOS como
+        meio de pagamento principal para assinaturas mensais recorrentes, visitas a clínicas e despesas do dia
+        a dia.</li>
+      <li><strong>Rede de Cashback com +10 mil Lojistas:</strong> Estabeleci integrações comerciais com mais de
+        10.000 lojistas parceiros, permitindo que os usuários paguem com a carteira digital e ganhem cashback
+        recorrente em bens e serviços essenciais.</li>
+      <li><strong>Parcerias com Marcas Tier-1:</strong> Integrei grandes marcas nacionais ao ecossistema,
+        incluindo <strong>RaiaDrogasil</strong> (descontos em farmácia e medicamentos), <strong>Ultragaz</strong>
+        (créditos de gás de cozinha) e <strong>TIM</strong> (recargas de celular com cashback).</li>
+      <li><strong>Micro-Frontend de Super App &amp; MiniApps:</strong> Reposicionei o app mobile como porta de
+        entrada unificada para o ecossistema mais amplo do grupo (incluindo educação e saúde contínua),
+        implementando uma arquitetura micro-frontend que suporta <strong>MiniApps</strong> modulares e
+        leves.</li>
+    </ul>
+    <figure class="project-modal-figure">
+      <img src="./assets/images/cartao_wallet_ecosystem.png" alt="Cartão de TODOS closed-loop wallet and partner ecosystem" loading="lazy">
+      <figcaption>Carteira de pagamentos closed-loop do Cartão de TODOS, rede de cashback com mais de 10 mil
+        parceiros (RaiaDrogasil, Ultragaz, TIM) e arquitetura de MiniApps.</figcaption>
+    </figure>
+  </template>
+  <template data-i18n-pt-for="project.cartao.section4">
+    <h4>📈 Impacto no Negócio &amp; Crescimento</h4>
+    <ul>
+      <li><strong>Escala &amp; Engajamento:</strong> Escalei o app do Cartão de TODOS para <strong>2 milhões de
+        Usuários Ativos Mensais (MAU)</strong>.</li>
+      <li><strong>Aceleração de TPV:</strong> Gerei um <strong>aumento de 3x no TPV</strong> (Volume Total de
+        Processamento) no trilho da carteira closed-loop.</li>
+      <li><strong>Diversificação de Canais:</strong> Transformei o app mobile no <strong>segundo maior canal de
+        aquisição de clientes</strong> do grupo, respondendo por <strong>1/4 (25%) de todas as novas aquisições
+        de assinantes</strong> e reduzindo fortemente a dependência dos canais tradicionais porta a porta.</li>
+    </ul>
+  </template>
+  <template data-i18n-pt-for="project.cartao.section5">
+    <h4>💡 Principais Contribuições como PM</h4>
+    <div class="project-modal-tags">
+      <span class="project-modal-tag">Product-Led Growth (PLG)</span>
+      <span class="project-modal-tag">Carteira Digital Closed-Loop</span>
+      <span class="project-modal-tag">Estratégia HealthTech &amp; FinTech</span>
+      <span class="project-modal-tag">Micro-Frontend &amp; MiniApps</span>
+      <span class="project-modal-tag">Cashback &amp; Rede de Parceiros</span>
+      <span class="project-modal-tag">Ecossistema Super App</span>
+      <span class="project-modal-tag">Aquisição de Usuários em Escala</span>
+    </div>
+  </template>
+  <template data-i18n-pt-for="project.cartao.achievements">
+
+    <div class="achievement-item">
+      <span class="achievement-number">2M</span>
+      <span class="achievement-label">Usuários Ativos Mensais (MAU)</span>
+    </div>
+
+    <div class="achievement-item">
+      <span class="achievement-number">3x</span>
+      <span class="achievement-label">Crescimento de TPV no trilho closed-loop</span>
+    </div>
+
+    <div class="achievement-item">
+      <span class="achievement-number">#2</span>
+      <span class="achievement-label">Maior canal de aquisição</span>
+    </div>
+
+    <div class="achievement-item">
+      <span class="achievement-number">25%</span>
+      <span class="achievement-label">De todas as novas aquisições de assinantes</span>
+    </div>
+
+    <div class="achievement-item">
+      <span class="achievement-number">10k+</span>
+      <span class="achievement-label">Lojistas parceiros &amp; cashback</span>
+    </div>
+
+    <div class="achievement-item">
+      <span class="achievement-number">530+</span>
+      <span class="achievement-label">Clínicas AmorSaúde em todo o país</span>
+    </div>
+
+    <div class="achievement-item achievement-item-wide">
+      <span class="achievement-number">7M+ Assinantes &middot; 1,8M Consultas/mês</span>
+      <span class="achievement-label">Maior ecossistema de saúde secundária do Brasil</span>
+    </div>
+
+  </template>
 
   <!--
     - custom js link

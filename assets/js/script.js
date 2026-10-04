@@ -148,6 +148,12 @@ if (projectModal) {
 
     if (template) {
       projectModalDesc.appendChild(template.content.cloneNode(true));
+      // re-apply the currently active language to the freshly-inserted
+      // [data-i18n] elements (translateContainer/currentLang are defined
+      // further down in this file, in the i18n section)
+      if (typeof translateContainer === "function") {
+        translateContainer(projectModalDesc, currentLang);
+      }
     } else {
       projectModalDesc.textContent = trigger.dataset.projectDesc || "";
     }
@@ -310,4 +316,95 @@ if (revealElems.length && !window.matchMedia("(prefers-reduced-motion: reduce)")
     revealObserver.observe(elem);
   });
 
+}
+
+
+
+// i18n (language toggle) functionality
+const LANG_STORAGE_KEY = "site-lang";
+let currentLang = "en";
+
+// lazily cache each [data-i18n] element's original (English) innerHTML
+// keyed by the element itself, so we can losslessly restore it later
+const originalContentMap = new Map();
+
+const cacheOriginals = function () {
+  if (originalContentMap.size) return;
+
+  const i18nElems = document.querySelectorAll("[data-i18n]");
+
+  for (let i = 0; i < i18nElems.length; i++) {
+    const elem = i18nElems[i];
+    if (!originalContentMap.has(elem)) {
+      originalContentMap.set(elem, elem.innerHTML);
+    }
+  }
+};
+
+// translate every [data-i18n] element found within a given container
+// (shared between the global applyLang call and the project modal, whose
+// template content is cloned into the DOM after the page has already loaded)
+const translateContainer = function (container, lang) {
+  const i18nElems = container.querySelectorAll("[data-i18n]");
+
+  for (let i = 0; i < i18nElems.length; i++) {
+    const elem = i18nElems[i];
+    const key = elem.dataset.i18n;
+
+    if (lang === "pt") {
+      const ptTemplate = document.querySelector('template[data-i18n-pt-for="' + key + '"]');
+      if (ptTemplate) {
+        elem.innerHTML = ptTemplate.innerHTML;
+      }
+    } else {
+      if (originalContentMap.has(elem)) {
+        elem.innerHTML = originalContentMap.get(elem);
+      }
+    }
+  }
+};
+
+const langToggleBtns = document.querySelectorAll("[data-lang-option]");
+
+const applyLang = function (lang) {
+  cacheOriginals();
+
+  currentLang = lang === "pt" ? "pt" : "en";
+
+  translateContainer(document, currentLang);
+
+  document.documentElement.lang = currentLang === "pt" ? "pt-BR" : "en";
+
+  for (let i = 0; i < langToggleBtns.length; i++) {
+    const btn = langToggleBtns[i];
+    const isActive = btn.dataset.langOption === currentLang;
+    btn.classList.toggle("active", isActive);
+    btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+  }
+
+  try {
+    localStorage.setItem(LANG_STORAGE_KEY, currentLang);
+  } catch (e) {
+    // localStorage may be unavailable (e.g. private browsing) — ignore
+  }
+};
+
+// determine initial language from localStorage, defaulting to English
+let initialLang = "en";
+try {
+  const storedLang = localStorage.getItem(LANG_STORAGE_KEY);
+  if (storedLang === "pt" || storedLang === "en") {
+    initialLang = storedLang;
+  }
+} catch (e) {
+  // localStorage may be unavailable — fall back to default
+}
+
+cacheOriginals();
+applyLang(initialLang);
+
+for (let i = 0; i < langToggleBtns.length; i++) {
+  langToggleBtns[i].addEventListener("click", function () {
+    applyLang(this.dataset.langOption);
+  });
 }
